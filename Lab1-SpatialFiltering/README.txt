@@ -10,7 +10,7 @@ Collaborators:
 Requirements:
 - Python 3
 - Jupyter Notebook
-- LaTeX (for PDF generation)
+- LaTeX (for PDF generation) - (For Ahilan's Local)
 
 Important Files:
 - LabNotebook.ipynb: Main notebook (if applicable)
