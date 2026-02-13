@@ -1,0 +1,288 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{siunitx}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{PHYS 332 -- Microscopy \& Cell Motility Lab}
+\lhead{Submission Summaries}
+\rfoot{Page \thepage}
+
+\newtcolorbox{summarybox}[1][]{
+    colback=blue!5,
+    colframe=blue!60,
+    fonttitle=\bfseries,
+    boxsep=3pt,
+    left=4pt, right=4pt,
+    after skip=0pt,
+    #1
+}
+
+\newtcolorbox{warningbox}[1][]{
+    colback=red!5,
+    colframe=red!60,
+    fonttitle=\bfseries,
+    boxsep=3pt,
+    left=4pt, right=4pt,
+    after skip=0pt,
+    #1
+}
+
+\setlength{\parskip}{0pt}
+\setlist[itemize]{noitemsep, topsep=2pt, parsep=0pt, partopsep=0pt}
+
+\title{\vspace{-1cm}\textbf{Lab Notebook Submission Summaries}\\[0.3em]
+\large Microscopy and Cell Motility (Lab 2) -- Sessions 3 \& 4}
+\author{Ahilan Kumaresan \& Nathan Unhrn\\PHYS 332}
+\date{}
+
+\begin{document}
+\maketitle
+
+%==============================================================================
+\section*{Week 3 Submission: Session 3}
+%==============================================================================
+
+\begin{summarybox}[title=Session Overview]
+\textbf{Date:} 10-Feb-2026 \hfill \textbf{Lab Partner:} Nathan Unhrn \hfill \textbf{Pages:} 6--26
+
+\textbf{Recorder:} Ahilan Kumaresan
+
+\textbf{Objective:} Observe live cells (yeast, HT1080 stained slides, pond water organisms); pivot from \textit{E.\ coli} plan after culture became unavailable; recalibrate microscope; collect preliminary data on motile organisms.
+\end{summarybox}
+
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}p{0.72\textwidth}r@{}}
+\toprule
+\textbf{Item} & \textbf{Page} \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Preparation}}} \\
+\quad Goals (revised after \textit{E.\ coli} unavailable), Variables, Apparatus & 6 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Calibration}}} \\
+\quad Calibration re-verification (100$\times$): 68.4~nm/px --- matches Session 1 & 8 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Pond Water}}} \\
+\quad SFU campus pond water collection procedure & 10 \\
+\quad Wet mount preparation; comparison of chamber types (spacer vs no spacer) & 11 \\
+\quad General observations: cells and debris present, no motility & 11 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Unknown Cells}}} \\
+\quad Unknown Cell 1: ${\sim}55$--58~\si{\micro\meter}, possible \textit{Arcella} or air bubble/spore; Image 1 & 13 \\
+\quad Unknown Cell 2: ${\sim}14 \times 19$~\si{\micro\meter}, possibly \textit{Pandorina} (colonial green alga); Image 2 & 15 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Yeast}}} \\
+\quad Yeast imaging: 3 dilutions (1:10, 1:100, 1:200); Brownian vibration only & 17 \\
+\quad Sugar gradient experiment idea for future sessions & 19 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{HT1080}}} \\
+\quad HT1080 malignant cells (pre-stained, 40$\times$): irregular web-like morphology; Image 4 & 19 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Conclusions \& Reflection}}} \\
+\quad Conclusions: calibration confirmed, no motile cells found, deferred to Session 4 & 21 \\
+\quad Plan for Session 4: incubated pond water, onion streaming, bead diffusion & 23 \\
+\quad Post-lab reflections; data files summary & 25--26 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.8em}
+\textbf{Key Files:}
+\begin{itemize}
+    \item \texttt{calibrate0000.tif}, \texttt{calibrate0001.tif} --- Calibration images
+    \item \texttt{yeast-10x.avi}, \texttt{yeast-100x.avi}, \texttt{yeast-200x.avi} --- Yeast dilution videos
+    \item \texttt{unknown.tif}, \texttt{unknown2.tif} --- Unknown pond water organisms
+    \item \texttt{ht1080.tif} --- HT1080 malignant cells
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Key Measurements (Session 3):}
+\begin{center}
+\begin{tabular}{@{}llp{5.5cm}@{}}
+\toprule
+\textbf{Parameter} & \textbf{Value} & \textbf{Notes} \\
+\midrule
+Pixel size (100$\times$) & 68.4 nm/px & Matches Session 1 (68.45 nm/px) \\
+Unknown Cell 1 & ${\sim}55$--58~\si{\micro\meter} & Possible spore or air bubble \\
+Unknown Cell 2 & ${\sim}14 \times 19$~\si{\micro\meter} & Possibly \textit{Pandorina} \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+%==============================================================================
+\newpage
+\section*{Week 4 Submission: Session 4}
+%==============================================================================
+
+\begin{summarybox}[title=Session Overview]
+\textbf{Date:} 12-Feb-2026 \hfill \textbf{Lab Partner:} Nathan Unhrn \hfill \textbf{Pages:} 52--81
+
+\textbf{Recorder:} Ahilan Kumaresan
+
+\textbf{Objective:} Verify calibration; check incubated pond water for motile organisms; explore onion cell cytoplasmic streaming as candidate short project; select project for Sessions 5--6.
+\end{summarybox}
+
+\begin{tabular}{@{}p{0.72\textwidth}r@{}}
+\toprule
+\textbf{Item} & \textbf{Page} \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Preparation}}} \\
+\quad Goals (8 objectives), Apparatus, Variables, References & 52--55 \\
+\quad Microscope setup verification: K\"ohler illumination, calibration & 56 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Calibration}}} \\
+\quad Calibration verification: 68.7~nm/px --- matches Sessions 1 \& 3 & 56 \\
+\quad Calibration error history: Session 2 (345~nm/px) was WRONG; correction factor 25.4$\times$ & 58 \\
+\quad Corrected $D$ values: 1~\si{\micro\meter} beads within ${\sim}15\%$ of Stokes--Einstein & 58 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Pond Water Incubation Check}}} \\
+\quad Visual inspection of 3-day incubated water; new collection technique & 60 \\
+\quad Microscope observations: more organisms, limited motility & 60 \\
+\quad New organism 3 \& 4 identification; Image 1, Image 2 & 62 \\
+\quad \textit{Conclusion: collection method $>$ incubation time; pond water unlikely as project} & \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Onion Cell Exploration}}} \\
+\quad Background: cytoplasmic streaming (cyclosis), actin/myosin transport & 64 \\
+\quad Onion preparation; observations at 50$\times$ and 100$\times$; Image 4 & 64--65 \\
+\quad Video capture: \texttt{onion-stream-01} (120 fr), \texttt{onion2-stream} (240 fr, nucleus visible!) & 66 \\
+\quad Manual velocity: Granule 1 = 0.0125~\si{\micro\meter/s}, Granule 2 = 0.0143~\si{\micro\meter/s} & 66 \\
+\quad Crystal Violet staining: nucleus and cell structures visible & 68 \\
+\quad \textit{Key observation: ``We are seeing the nucleus! Lots of material going towards it!!''} & \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Post-Lab Analysis}}} \\
+\quad Qualitative motion comparison table (beads vs yeast vs pond vs onion) & 69 \\
+\quad Automated trajectory analysis: custom Python tracking pipeline; Figure 1 & 69--70 \\
+\quad MSD log--log analysis: $\alpha = 1.662 \pm 0.052$ (superdiffusive); Figure 2 & 71 \\
+\quad Velocity estimates table (manual + automated) & 71 \\
+\quad Quantitative results: 1246 particles, 20 top segments; Table + Figures A--C & 73--74 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Project Selection \& Conclusions}}} \\
+\quad Decision matrix: Bead Diffusion selected (score 15 vs Onion 13, Pond 9) & 75 \\
+\quad Conclusions: calibration verified, onion $\alpha = 1.66$, bead diffusion for Sessions 5--6 & 76 \\
+\quad Plan for Sessions 5--6: glycerol solutions, bead sizes, Stokes--Einstein verification & 78 \\
+\quad Post-lab reflections; data files inventory & 79--81 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.8em}
+\textbf{Key Files:}
+\begin{itemize}
+    \item \texttt{calibration-100x-feb-12.tif} --- Calibration image
+    \item \texttt{onion-stream-01.avi} --- Onion streaming video (120 frames)
+    \item \texttt{onion2-stream.avi} --- Onion streaming video (240 frames, nucleus visible)
+    \item \texttt{onion-stained-10x.tif}, \texttt{onion-stained-50x.tif} --- Crystal Violet stained onion
+    \item \texttt{unknown-3.avi}, \texttt{unknown4.avi} --- New pond water organisms
+    \item \texttt{onion2-trackresults.txt} --- Tracking data export
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Key Measurements (Session 4):}
+\begin{center}
+\begin{tabular}{@{}llp{5cm}@{}}
+\toprule
+\textbf{Parameter} & \textbf{Value} & \textbf{Notes} \\
+\midrule
+Pixel size (100$\times$) & 68.7 nm/px & Confirmed (condenser shift ${\sim}0.4\%$) \\
+Mean streaming speed & $0.0228 \pm 0.0071$~\si{\micro\meter/s} & Automated tracking (top 20) \\
+MSD exponent $\alpha$ & $1.662 \pm 0.052$ & Superdiffusive \\
+$D_{\text{eff}}$ (onion) & $0.000623 \pm 0.000038$~\si{\micro\meter^2/s} & Effective diffusion \\
+Directionality ratio & $0.540 \pm 0.229$ & Mixed directed + random \\
+Corrected $D$ (1~\si{\micro\meter} beads) & 0.507~\si{\micro\meter^2/s} & Within ${\sim}15\%$ of theory (0.441) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+%==============================================================================
+\newpage
+\section*{Executive Summary}
+%==============================================================================
+
+\subsection*{Key Figures}
+\begin{tabular}{@{}llr@{}}
+\toprule
+\textbf{Figure} & \textbf{Description} & \textbf{Page} \\
+\midrule
+Image 1 (S3) & Unknown cell 1 from SFU pond water (${\sim}55$--58~\si{\micro\meter}) & 15 \\
+Image 2 (S3) & Unknown cell 2 from SFU pond water (${\sim}14 \times 19$~\si{\micro\meter}) & 16 \\
+Image 4 (S3) & HT1080 malignant cells at 100$\times$ & 21 \\
+Image 1 (S4) & Unknown organism 3 from incubated pond water & 62 \\
+Image 2 (S4) & Unknown organism 4 at 100$\times$ & 62 \\
+Image 4 (S4) & Onion epidermis cells at 100$\times$, granules visible & 65 \\
+Figure 1 & 2D trajectories of onion granules & 70 \\
+Figure 2 & MSD log--log plot, $\alpha = 1.66$ & 71 \\
+Figure A & Onion cell particle trajectories (quantitative) & 74 \\
+Figure B & Displacement statistics & 74 \\
+Figure C & MSD analysis log--log plot & 74 \\
+\bottomrule
+\end{tabular}
+
+\subsection*{Key Tables}
+\begin{tabular}{@{}llr@{}}
+\toprule
+\textbf{Table} & \textbf{Description} & \textbf{Page} \\
+\midrule
+Calibration history & Sessions 1--4 pixel size comparison & 58 \\
+Corrected $D$ values & 1~\si{\micro\meter} and 5~\si{\micro\meter} beads vs Stokes--Einstein & 58 \\
+Pond water comparison & Session 3 vs Session 4 incubation changes & 60 \\
+100$\times$ observation & Onion cell features at high magnification & 65 \\
+Video recording log & Two onion streaming recordings & 66 \\
+Motion comparison & Beads vs yeast vs pond vs onion (qualitative) & 69 \\
+Automated tracking & 8 parameters with uncertainties & 73 \\
+Decision matrix & Project selection scores (weighted) & 75 \\
+Motion types & $D$, motion type, $\alpha$ for all systems & 76 \\
+\bottomrule
+\end{tabular}
+
+\subsection*{Conclusions}
+
+\textbf{Calibration (p.\ 58):}
+\begin{center}
+\fbox{\parbox{0.85\textwidth}{\centering
+Session 2 used 0.345~\si{\micro\meter}/px (INCORRECT). Correct: 0.0684~\si{\micro\meter}/px, confirmed in Sessions 1, 3, and 4.\\[0.3em]
+This resolves the 20--40$\times$ discrepancy in Week 1 $D$ values.\\
+Corrected 1~\si{\micro\meter} bead $D$ within ${\sim}15\%$ of theory.
+}}
+\end{center}
+
+\textbf{Onion Cell Streaming (p.\ 71):}
+\begin{center}
+\fbox{\parbox{0.85\textwidth}{\centering
+MSD exponent $\alpha = 1.662 \pm 0.052$ $\to$ \textbf{superdiffusive}.\\[0.3em]
+Between pure diffusion ($\alpha = 1$) and ballistic ($\alpha = 2$).\\
+Consistent with directed cytoplasmic streaming along actin filaments + random thermal fluctuations.
+}}
+\end{center}
+
+\textbf{Project Selection (p.\ 75):}
+\begin{center}
+\fbox{\parbox{0.85\textwidth}{\centering
+\textbf{Bead Diffusion} selected for Sessions 5--6.\\[0.3em]
+Best systematic comparison to Stokes--Einstein theory\\
+with varied viscosity (glycerol) and bead size (1, 5~\si{\micro\meter}).
+}}
+\end{center}
+
+%==============================================================================
+\subsection*{Summary}
+%==============================================================================
+
+Sessions 3--4 transitioned from passive observations (beads, fixed cells) to exploring active biological transport. The key discovery was \textbf{onion cell cytoplasmic streaming} with MSD exponent $\alpha = 1.66 \pm 0.05$, clearly distinguishing directed intracellular transport from Brownian diffusion. The calibration error from Session 2 ($5\times$ overestimate) was definitively resolved by consistent measurements across Sessions 1, 3, and 4 (all within 68.4--68.7~nm/px).
+
+\textbf{Not completed:} \textit{E.\ coli} imaging (culture unavailable), bead diffusion verification (deferred to Sessions 5--6).
+
+\textbf{Selected project for Sessions 5--6:} Bead Diffusion (varied viscosities and sizes) + yeast cell population study.
+
+\vspace{0.5em}
+\hrule
+\vspace{0.5em}
+
+\textbf{Repository:} \url{https://github.com/Ahilan-Bucket/phys332W-sfu/tree/main/Lab2-Microscopy-and-Motility}
+
+\end{document}

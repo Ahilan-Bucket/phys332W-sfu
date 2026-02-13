@@ -1,0 +1,328 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{multicol}
+\usepackage{amsmath}
+\usepackage{siunitx}
+
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{PHYS 332 - Microscopy \& Cell Motility Lab}
+\lhead{Submission Summaries}
+\rfoot{Page \thepage}
+
+\newtcolorbox{summarybox}[1][]{
+    colback=blue!5,
+    colframe=blue!60,
+    fonttitle=\bfseries,
+    boxsep=3pt,
+    left=4pt, right=4pt,
+    after skip=0pt,
+    #1
+}
+
+\newtcolorbox{warningbox}[1][]{
+    colback=red!5,
+    colframe=red!60,
+    fonttitle=\bfseries,
+    boxsep=3pt,
+    left=4pt, right=4pt,
+    after skip=0pt,
+    #1
+}
+
+\setlength{\parskip}{0pt}
+\setlist[itemize]{noitemsep, topsep=2pt, parsep=0pt, partopsep=0pt}
+
+\title{\vspace{-1cm}\textbf{Lab Notebook Submission Summaries}\\[0.3em]
+\large Microscopy and Cell Motility (Lab 2) -- Sessions 1 \& 2}
+\author{Ahilan Kumaresan \& Nathan Unhru\\PHYS 332}
+\date{}
+
+\begin{document}
+\maketitle
+
+%==============================================================================
+\section*{Week 1 Submission: Session 1}
+%==============================================================================
+
+\begin{summarybox}[title=Session Overview]
+\textbf{Date:} 3-Feb-2026 \hfill \textbf{Lab Partner:} Nathan Unhru \hfill \textbf{Pages:} 1--13
+
+\textbf{Recorder:} Ahilan Kumaresan
+
+\textbf{Objective:} Learn microscope operation; achieve K\"ohler illumination; calibrate 100$\times$ oil objective; prepare diluted 1~\si{\micro\meter} bead sample; capture Brownian motion video; extract particle trajectories.
+\end{summarybox}
+
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{@{}p{0.72\textwidth}r@{}}
+\toprule
+\textbf{Item} & \textbf{Page} \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Preparation}}} \\
+\quad Goals (6 objectives), Table of Contents & 1--2 \\
+\quad Apparatus: Vision Assistant, ImageJ, FLIR BlackFly U3-13Y3M, 100$\times$ oil objective & 2 \\
+\quad Variables table: time, $x(t)$, $y(t)$, $\delta x$, $\delta y$, bead size, frame rate & 3 \\
+\quad References: Lab script, protocols, Hughes \& Hase Ch.\ 2.9, 5--8 & 3 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Part A: K\"ohler Illumination Setup}}} \\
+\quad Procedure: 7-step alignment following Protocol: Microscope Setup & 5 \\
+\quad Key note: Field diaphragm $\to$ illumination area; Aperture diaphragm $\to$ NA/contrast & 5 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Part B: Camera Calibration with Stage Micrometer}}} \\
+\quad Troubleshooting: Camera detection error --- fixed by restart & 6 \\
+\quad Image 3: Screenshot of Vision Assistant working window & 6 \\
+\quad Calibration image saved: \texttt{Home/Data/2026-02-03/imagecalibration.tif} & 7 \\
+\quad Measured 8 lines spanning 1168.706 pixels $\Rightarrow$ 73.044 px/line & 7 \\
+\quad \textbf{Calibration result:} 68.45 nm/pixel (later corrected in Session 2) & 7 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Part C: Sample Preparation}}} \\
+\quad Pre-lab dilution calculation: target $\sim$20 beads in FOV & 7--8 \\
+\quad Stock: 0.5 wt\% (5 mg/mL); Required: $5.48 \times 10^8$ beads/mL & 8 \\
+\quad Dilution factor: 1:17 $\Rightarrow$ 1~\si{\micro\liter} stock + 30~\si{\micro\liter} water & 8--9 \\
+\quad Materials: glass slides, coverslips, Parafilm spacers (100~\si{\micro\meter}) & 9 \\
+\quad Procedure: 6-step thick chamber method, sealed with nail polish & 10 \\
+\quad Quick check: 25--30 beads in FOV at 100$\times$, no aggregation & 10 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Part D: Data Collection --- Brownian Motion Video}}} \\
+\quad Environmental conditions: $T = 22.3 \pm 0.5$~\si{\celsius} & 11 \\
+\quad Issue 1: Drift observed (coverslip not sealed) $\to$ applied more nail polish & 11 \\
+\quad Issue 2: Beads moving in/out of focus $\to$ track only in-focus beads & 12 \\
+\quad Saved: \texttt{1um-1frame.avi}, \texttt{1um-5frame.avi} & 11 \\
+\quad \textbf{Conclusion:} 60~s video at 1~fps (60 frames) successfully recorded & 12 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Part E: Particle Tracking}}} \\
+\quad Method: ImageJ MTrack2 plugin (Protocol: Tracking Particles) & 13 \\
+\quad Procedure: Import AVI $\to$ background subtraction (rolling ball = 50~px) $\to$ MTrack2 & 13 \\
+\quad Exported trajectories as CSV & 13 \\
+\quad \textbf{Result:} Successfully tracked beads for 120 frames & 13 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.8em}
+\textbf{Key Files:}
+\begin{itemize}
+    \item \texttt{Home/Data/2026-02-03/imagecalibration.tif} --- Calibration image
+    \item \texttt{Home/Data/2026-02-03/1um-1frame.avi} --- Brownian motion video (1 fps)
+    \item \texttt{Home/Data/2026-02-03/1um-5frame.avi} --- Brownian motion video (5 fps)
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Key Measurements (Session 1):}
+\begin{center}
+\begin{tabular}{@{}llp{5.5cm}@{}}
+\toprule
+\textbf{Parameter} & \textbf{Value} & \textbf{Notes} \\
+\midrule
+Pixel size & 68.45 nm/px & \textcolor{red}{Later corrected to 345 nm/px} \\
+Stage micrometer & 0.01 mm/line & 100 div = 1 mm \\
+Dilution factor & 1:17 & Based on pre-lab calculation \\
+Chamber depth & 100 \si{\micro\meter} & Parafilm thickness \\
+Beads in FOV & 25--30 & Slightly above target of 20 \\
+Temperature & $22.3 \pm 0.5$~\si{\celsius} & Room temperature \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+%==============================================================================
+\newpage
+\section*{Week 2 Submission: Session 2}
+%==============================================================================
+
+\begin{summarybox}[title=Session Overview]
+\textbf{Date:} 6-Feb-2026 \hfill \textbf{Lab Partner:} Nathan Unhru \hfill \textbf{Pages:} 23--35
+
+\textbf{Recorder:} Ahilan Kumaresan (first hour), Nathan Unhru (remainder)
+
+\textbf{Objective:} Redo dilution with corrected pixel size; recalibrate camera; collect data for 1~\si{\micro\meter} and 5~\si{\micro\meter} beads; perform MSD analysis; compare diffusion coefficient $D$ to Stokes-Einstein prediction.
+\end{summarybox}
+
+\begin{tabular}{@{}p{0.72\textwidth}r@{}}
+\toprule
+\textbf{Item} & \textbf{Page} \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Preparation}}} \\
+\quad Goals (6 objectives), Table of Contents & 23--24 \\
+\quad Apparatus additions: 1~\si{\micro\meter} and 5~\si{\micro\meter} beads, Python analysis code & 25 \\
+\quad Variables: refer to Session 1, page 3 & 25 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Recalibration}}} \\
+\quad Verified with TA: Lab script FOV incorrect; true FOV = $1440 \times 1080$ px & 26 \\
+\quad Learning: Focus progressively 10$\times$ $\to$ 40$\times$ $\to$ 100$\times$ (faster than jumping) & 26 \\
+\quad Cleaning: Ethanol + lens paper to remove oil from calibration slide & 26 \\
+\quad Figure 1: Calibration lines from stage micrometer at 100$\times$ & 28 \\
+\quad New measurement: 8 lines = 1159.3 px; 1 div = 0.05 mm & 28 \\
+\quad \textbf{Corrected pixel size:} $\mathbf{0.345}$~\si{\micro\meter}/px (was 0.0685 \si{\micro\meter}/px) & 28 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Sample Preparation --- Revised Dilutions}}} \\
+\quad 1~\si{\micro\meter} beads: Required 225$\times$ dilution (far from initial 17$\times$) & 29 \\
+\quad Suspicion: stock not mixed properly or surface drawn without mixing & 29 \\
+\quad 5~\si{\micro\meter} beads: Calculated 1:6.5 dilution; used 100~\si{\micro\liter} + 650~\si{\micro\liter} water & 27 \\
+\quad Tested multiple concentrations; found optimal with 225$\times$ (1~\si{\micro\meter}) and 7.5$\times$ (5~\si{\micro\meter}) & 29 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Data Collection}}} \\
+\quad Camera error: same issue as Session 1; fixed via Settings $\to$ remove device $\to$ replug & 27 \\
+\quad Error: Cannot record 18000 frames; limited to $\sim$120 frames & 27 \\
+\quad Data folder: \texttt{Data/2026-02-05/} & 30 \\
+\quad Files: \texttt{1mu-21C-1isto224w-0\_5p.avi}, \texttt{5mu-21C-1isto6\_5w-0\_5p.avi} & 30 \\
+\quad Temperature: 21~\si{\celsius} & 30 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Particle Tracking}}} \\
+\quad Figure 2: 1~\si{\micro\meter} tracking settings (dark threshold, red background) & 31 \\
+\quad Figure 3: 5~\si{\micro\meter} tracking settings (larger object size) & 31 \\
+\quad Key insight: Track dark rings of beads, not bright centers (better for 1~\si{\micro\meter}) & 29 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Data Analysis}}} \\
+\quad Analysis script: \texttt{analyze\_microscopy\_data.py} (adapted from Canvas demos) & 32--37 \\
+\quad Methods: (1) Histogram fit, (2) MSD slope, (3) Stokes-Einstein theory & 38 \\
+\quad Trajectory plots, displacement histograms, MSD vs $\tau$ plots & 39--42 \\
+\midrule
+\multicolumn{2}{l}{\textit{\textbf{Results \& Conclusions}}} \\
+\quad 1~\si{\micro\meter} beads: $D_{\text{hist}} = 8.71$, $D_{\text{MSD}} = 13.07$, $D_{\text{theory}} = 0.44$~\si{\micro\meter^2/s} & 38 \\
+\quad 5~\si{\micro\meter} beads: $D_{\text{hist}} = 2.73$, $D_{\text{MSD}} = 3.74$, $D_{\text{theory}} = 0.09$~\si{\micro\meter^2/s} & 41 \\
+\quad \textbf{Discrepancy:} Experimental $D$ is 20--40$\times$ higher than theory & 43 \\
+\quad Possible causes: tracking noise, calibration error, or systematic issue & 43 \\
+\bottomrule
+\end{tabular}
+
+\vspace{0.8em}
+\textbf{Key Files:}
+\begin{itemize}
+    \item \texttt{Data/2026-02-05/1mu-21C-1isto224w-0\_5p.avi} --- 1~\si{\micro\meter} bead video
+    \item \texttt{Data/2026-02-05/5mu-21C-1isto6\_5w-0\_5p.avi} --- 5~\si{\micro\meter} bead video
+    \item \texttt{1mu-21c-1isto224w-0\_5p-trackresults.txt} --- Tracking data (1~\si{\micro\meter})
+    \item \texttt{5mu-21c-1isto6\_5w-0\_5p-trackresults.txt} --- Tracking data (5~\si{\micro\meter})
+    \item \texttt{analyze\_microscopy\_data.py} --- Python analysis script
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Key Measurements (Session 2):}
+\begin{center}
+\begin{tabular}{@{}llp{5cm}@{}}
+\toprule
+\textbf{Parameter} & \textbf{Value} & \textbf{Notes} \\
+\midrule
+Pixel size (corrected) & 0.345 \si{\micro\meter}/px & 5$\times$ larger than Session 1 \\
+Frame rate & 226 fps & High-speed camera \\
+Temperature & 21~\si{\celsius} (294.15 K) & \\
+Viscosity ($\eta$) & 0.00098 Pa$\cdot$s & Water at 21~\si{\celsius} \\
+1~\si{\micro\meter} dilution & 1:225 & Much higher than calculated \\
+5~\si{\micro\meter} dilution & 1:6.5 & Matches calculation \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+%==============================================================================
+\newpage
+\section*{Executive Summary}
+%==============================================================================
+
+\subsection*{Main Figures}
+\begin{tabular}{@{}llr@{}}
+\toprule
+\textbf{Figure} & \textbf{Description} & \textbf{Page} \\
+\midrule
+Image 1 & Microscope setup --- eyepiece, condenser, focus knobs labeled & 4 \\
+Image 2 & Translation stage close-up with calibration slide & 4 \\
+Image 3 & Vision Assistant working window screenshot & 6 \\
+Figure 1 & Calibration lines at 100$\times$ (Session 2) & 28 \\
+Figure 2 & MTrack2 settings for 1~\si{\micro\meter} beads & 31 \\
+Figure 3 & MTrack2 settings for 5~\si{\micro\meter} beads & 31 \\
+--- & Particle trajectories (1~\si{\micro\meter} and 5~\si{\micro\meter}) & 39, 41 \\
+--- & Displacement histograms with Gaussian fits & 40, 42 \\
+--- & MSD vs time lag plots with linear fits & 40, 42 \\
+\bottomrule
+\end{tabular}
+
+\subsection*{Main Tables}
+\begin{tabular}{@{}llr@{}}
+\toprule
+\textbf{Table} & \textbf{Description} & \textbf{Page} \\
+\midrule
+Apparatus Table & Equipment list with descriptions & 2 \\
+Variables Table & Independent, dependent, control variables & 3 \\
+--- & Dilution calculations (1~\si{\micro\meter} beads) & 8 \\
+--- & Dilution calculations (5~\si{\micro\meter} beads) & 27 \\
+--- & Analysis results comparison & 38, 41 \\
+\bottomrule
+\end{tabular}
+
+\subsection*{Boxed Conclusions}
+
+\textbf{Sample Preparation (p.\ 10):}
+\begin{center}
+\fbox{\parbox{0.75\textwidth}{\centering
+Sample prepared with 1:30 dilution.\\
+Observed 25--30 beads in FOV at 100$\times$. No aggregation visible.
+}}
+\end{center}
+
+\textbf{Calibration Correction (p.\ 28):}
+\begin{center}
+\fbox{\parbox{0.75\textwidth}{\centering
+\textbf{Corrected pixel size:} 1 px $\approx$ 0.345~\si{\micro\meter}\\[0.3em]
+Previous value (68.45 nm/px) was incorrect by factor of $\sim$5.\\
+Lab script FOV information was inaccurate; verified with TA.
+}}
+\end{center}
+
+\textbf{Brownian Motion Recording (p.\ 12):}
+\begin{center}
+\fbox{\parbox{0.75\textwidth}{\centering
+Successfully recorded 60~s video at 1~fps (60 frames).
+}}
+\end{center}
+
+\textbf{Diffusion Coefficient Results (p.\ 38, 41):}
+\begin{center}
+\fbox{\parbox{0.85\textwidth}{\centering
+\textbf{1~\si{\micro\meter} beads:} $D_{\text{exp}} \approx 8.7$--$13.1$~\si{\micro\meter^2/s} \quad vs \quad $D_{\text{theory}} = 0.44$~\si{\micro\meter^2/s}\\[0.5em]
+\textbf{5~\si{\micro\meter} beads:} $D_{\text{exp}} \approx 2.7$--$3.7$~\si{\micro\meter^2/s} \quad vs \quad $D_{\text{theory}} = 0.09$~\si{\micro\meter^2/s}\\[0.5em]
+\textcolor{red}{\textbf{Discrepancy: Experimental values are 20--40$\times$ higher than Stokes-Einstein predictions.}}\\
+Likely causes: tracking noise inflating variance, or residual calibration error.
+}}
+\end{center}
+
+\subsection*{Stokes-Einstein Equation}
+\begin{equation*}
+D = \frac{k_B T}{6 \pi \eta r}
+\end{equation*}
+where $k_B = 1.38 \times 10^{-23}$~J/K, $T = 294.15$~K, $\eta = 0.00098$~Pa$\cdot$s, $r$ = bead radius.
+
+%==============================================================================
+\subsection*{Summary}
+%==============================================================================
+
+Sessions 1--2 established the microscopy workflow: K\"ohler illumination alignment, camera calibration using a stage micrometer, sample preparation with thick chambers (Parafilm spacers), and Brownian motion video capture. A critical calibration error was identified and corrected in Session 2 (pixel size changed from 68.45~nm to 345~nm per pixel).
+
+Particle tracking using ImageJ MTrack2 and Python analysis successfully produced:
+\begin{itemize}
+    \item Trajectory plots showing random walk behavior
+    \item Displacement histograms fitted to Gaussian distributions
+    \item Mean Squared Displacement (MSD) plots with linear fits
+\end{itemize}
+
+However, the measured diffusion coefficients are significantly higher than theoretical predictions (20--40$\times$), suggesting systematic issues that require further investigation.
+
+\vspace{0.5em}
+\hrule
+\vspace{0.5em}
+
+\begin{warningbox}[title=Not Yet Completed (Lab Period 3)]
+\begin{itemize}
+    \item \textbf{Cell Size Observations:} Yeast cells (\textit{S.\ cerevisiae}), HT1080 fixed cells
+    \item \textbf{Bacterial Motion:} \textit{E.\ coli} mutant strain HCB1274, Pre-lab Question 8
+    \item \textbf{Uncertainty Analysis:} Random vs systematic distinction, dominant source identification
+    \item \textbf{Discrepancy Discussion:} Deeper analysis of why $D_{\text{exp}} \gg D_{\text{theory}}$
+\end{itemize}
+\end{warningbox}
+
+\vspace{0.5em}
+\textbf{Repository:} \url{https://github.com/Ahilan-Bucket/phys332W-sfu/tree/main/Lab2-Microscopy-and-Motility}
+
+\end{document}
