@@ -1,0 +1,239 @@
+
+% Feb 2022 [JB]:  version for 332-W in Spring 2022
+
+\documentclass[aps,prl,longbibliography,preprint]{revtex4-2}
+
+\usepackage{amssymb,amsmath,amsfonts}
+\usepackage{fancyhdr,graphicx}
+\usepackage[pdftex,colorlinks=true,pdfstartview=Fit]{hyperref}
+
+\usepackage{physics}					% various macros (derivatives, etc.)
+\usepackage[euler]{textgreek}				% for text greek letters (not in italics font)
+\usepackage{enumitem}
+\usepackage{mdframed}
+\usepackage{xfrac}						% for slanted fractions  \sfrac{..."D:\Documents\SFU\PHYS382-AdvancedLab\Personal\Lab2-Sessions3-4-FINAL-v4.docx"}{...}
+
+\usepackage{color}
+\newcommand{\red}[1]{\textcolor{red}{#1}}	% shortcut for red text
+\newcommand{\blue}[1]{\textcolor{blue}{#1}}	% shortcut for blue text
+
+
+\DeclareMathOperator {\ddelta}{\! \text{\textdelta} \!}		% Dirac delta & differential are roman
+\DeclareMathOperator {\e}{e}						% e for exponential should be roman
+\DeclareMathOperator {\ii}{i \hspace{-0.1em}}			% i = square root (-1) should be roman
+\newcommand*{\tran}{{\mkern-1.5mu\mathsf{T}}}		% for vector/matrix transpose  A^\tran
+
+
+
+%beginning of printed output
+\begin{document}
+
+% The title, author and date are defined here, for later formatting with
+% the \maketitle command
+\title{On the limits of Ohm's Law}
+\author{John Bechhoefer (edited by Barbara Frisken)}
+\affiliation{Department of Physics, Simon Fraser University, Burnaby, B.C., V5A 1S6, Canada}
+\date{\today}
+
+% The abstract is displayed
+\begin{abstract}
+Ohm's Law states that the voltage drop across a resistor is proportional to the current passing through it. In order to study the conditions under which Ohm's Law is valid, we measured the voltage-current relations for a lamp filament and a metal-film resistor.  The filament showed obvious resistance variations as the power through it was increased, while the metal-film resistor showed a much smaller effect.  The differences reflect temperature differences in the objects themselves, which trace back to the different insulation present for the filament and metal-film resistors.
+\end{abstract}
+
+% If the following line is omitted, the title, author
+% and date are not displayed. 
+\maketitle
+
+\section{Introduction}
+
+Ohm's Law, $V=IR$, states that the voltage drop $V$ across a resistor is proportional to the current $I$ passing through the resistor \cite{ohm,randomarticle}.  The proportionality constant, $R$, is known as the \textit{resistance} and is determined by both material properties (the intrinsic resistivity) and geometry (the length and cross-sectional area of the active material).  This law is one of many with a similar form,  ``potential drop" $\propto$ ``current," which include Fourier's law of heat conduction (temperature gradient $\propto$ heat current) and Fick's law of diffusion (chemical-potential gradient $\propto$ mass current) \cite{schroeder}.  
+
+All of these laws are expected to hold when ``close enough" to equilibrium -- that is, when the currents that pass are ``small enough."  However, it is not obvious just what ``small enough" means in practice, nor what happens if the required conditions are not met.  
+
+In this study, we examine this question in the context of Ohm's law, by measuring the electrical resistance of a lamp as the current through it is increased.  The drastic change in temperature of the bulb's filament -- from room temperature with no current to white-hot at full current -- leads one to anticipate that out-of-equilibrium effects will be important.  For comparison, we also look at an ordinary metal-film resistor.
+
+\section{Theory}
+\label{sec:theory}
+
+Actually, there is no theory section in this paper, as originally written.  But the labs for PHYS 332 (and most papers in physics) usually do have a section that introduces the theoretical background of a paper in more detail than would be appropriate for an introduction.  Remember that the introduction is for a broader audience.  The theory section is to help a more serious reader understand the context of the problem.  If these are standard equations, they can simply be quoted.  If they are less common and you need a particular form (to use in fitting data, for example), then you can include a brief derivation in this section.  Any derivation longer than about half a page should be put in an Appendix.
+
+\section{Methods}
+\label{sec:methods}
+
+In order to examine Ohm's Law, we need a setup that allows us to vary the current passing through the resistor being studied, and to measure the current and the voltage drop across the resistor. This was achieved by setting up a voltage divider consisting of two resistors $R_1$ and $R_2$, as shown in Fig.~\ref{fig:schematic}. The voltage across each resistor was read by a data acquisition device, or DAQ, (National Instruments, model USB-6009).  The top resistor $R_1$ in the diagram, the reference resistor, was an ordinary carbon resistor with a nominal resistance of 221 $\Omega$, as measured by a digital multimeter (Circuit-Test DMR 4200 multimeter). The DAQ was used to measure the voltage drop across this resistor and the current through the two resistors was calculated using Ohm's law and the nominal resistance of the carbon resistor.  The lower resistor, the test resistor shown as $R_2$ in the figure, was either a 25~W lamp (General Electric T12 linear-filament bulb) or a metal-film resistor, as discussed below.
+
+\begin{figure}[h] 
+  \centering
+  \includegraphics[width=6.5 truein]{expt_schematic}   
+     \caption{Schematic of the experimental setup, showing the voltage divider, with $R_1$ the reference resistor and $R_2$ either the lamp or metal-film resistor.  Connections to the voltage inputs of the DAQ and the analog output that controls the power supply are also shown.}
+     \label{fig:schematic}
+\end{figure}
+
+%Omit the following because, in retrospect, it is not very relevant.  (We do end up averaging -- but not the 48 kHz data, as discussed below.)  If you're reading this, though, check out the omitted figure -- it's quite interesting.  But not everything interesting needs to be included...
+
+%Because this experiment involves careful voltage measurements, we thought it prudent to first characterize the statistical fluctuations associated with measurements by the DAQ.  We thus began by capturing 1s worth of voltage measurements across the lamp on the DAQ, sampled at 48 kHz.  For this, we set the current through the bulb to zero.  The resulting waveform, Fig.~\ref{fig:volt_stats}a, shows clear effects of quantization\cite{quantization}.    As a result, a histogram of the voltage levels is severely distorted, as only a few values are possible (Fig.~\ref{fig:volt_stats}c).  Figure \ref{fig:volt_stats} b and d show an easy way to simplify the statistics of the voltage fluctuations: we simply decimate the waveform by averaging in blocks of 100 points.  By the central-limit theorem, the fluctuations of the averaged data much more nearly approximates a Gaussian \cite{TaylorXXX where?}.  Indeed, while a fit to the raw data is far from a Gaussian (the error bars for statistical fluctuations are so small they cannot be seen in (b)), the fit to the decimated data is statistically good ($\chi^2 = 16.1$ for $18-3 = 15$ degrees of freedom).  As a bonus, the statistical error is reduced from 2.1 mV for a single measurement to 0.25 mV for the averaged measurements (close to the expected factor of $\sqrt{100} = 10$).  Although it would have been straightforward to have used averaged data, we found that systematic drift effects tended to outweigh statistical fluctuations in this experiment; we therefore did \emph{not} average our data in the experiments discussed here.
+
+%\begin{figure}[h] 
+%  \centering
+%  \includegraphics[width=5.0in]{volt_stats}   
+%     \caption{(a)  Time series of voltage measurements (48 kHz)  (b)  Same time series as (a), decimated by a factor of 100, as discussed in text.  (c)  Histogram of voltage readings for (a).  (d)  Same for (b).}
+%     \label{fig:volt_stats}
+%\end{figure}
+
+The current through the test resistor was controlled by setting an overall voltage across the circuit.  The voltage was controlled by the computer,  using one of the DAQ's analog out circuits to control the analog input of an analog-programmable power supply (Xantrex XT60-1 power supply, with programmable analog interface).  The power supply had an internal gain of 6, so that the maximum voltage of the DAQ, 5 V, corresponded to 30 V on the power supply.  Several different but similar programs were written in National Instruments LabVIEW (National Instruments, LabVIEW 2016) to measure the response of the lamp under different conditions.  The recorded data were graphed and analyzed using the Igor-Pro software package (Igor-Pro, v.~6.37, by WaveMetrics, Inc.).
+% The current version of this course uses Python for graphs.
+
+In initial work, we used a knob control to set (and change) the current through the lamp.  Qualitatively, we noticed that the voltage measured across the bulb drifted after changing the current.  We confirmed this by taking a time series of the bulb voltage while making small step increases or decreases to the current through the bulb (Fig.~\ref{fig:lamp_transient}).  We observed that the temperature relaxes to the new steady-state value as the current is either increased or decreased.  In Fig.~\ref{fig:lamp_transient}, an exponential curve,
+\begin{equation}
+	V(t) = V_0 \, \e^{-t/\tau} \,,
+	%  Note the \, adds a bit of space between V_0 and e^{...} -- it's prettier
+	%  Note the punctuation at the end of the equation (with extra space)
+	%  Equations should be punctuated just as other sentence structures are.
+	%  Note the use of Roman font for e, the natural log basis.  It is NOT a variable and thus should not be in italics.
+\label{eq:exp-fit}
+\end{equation}
+was fit to one of the segments and a decay constant of roughly 0.9 s ($0.8884 \pm 0.0005$ s) was found.  (Exponential cooling and heating curves similar to that of Eq.~\eqref{eq:exp-fit} are typical of systems described by Newton's law of cooling, where the relaxation rate to the current equilibrium is proportional to the distance from equilibrium \cite{newton}.)  Since the relaxation time was just under 1 s, we expected that waiting 10 s would be sufficient for transient effects to relax.
+% using \eqref{xxx} rather than \ref{xxx} adds parentheses around the equation number.
+
+\begin{figure}[h] 
+  \centering
+  \includegraphics[width=3.0in]{lamp_transient}   
+     \caption{Transient response of the lamp.  Current was cycled between 64 and 80 mA.  Heavy line overlaid on left-most segment is a fit to an exponential relaxation.  Data collected at 30~Hz.  The individual markers are not resolved.}
+     \label{fig:lamp_transient}
+\end{figure}
+
+We looked at the question of drift in a slightly different way, as well.  In the measurement of IV curves (current-voltage), we stepped through a series of currents, with a set time between each measurement.  At the end of that time, 100 points were collected at 1 kHz.  Fig.~\ref{fig:drift_layout}a shows one such measurement taken 1 s after changing the current.  One can easily see the drift superimposed on top of statistical fluctuations.  Figure~\ref{fig:drift_layout}c shows  similar data collected 10 s after changing the current.  No drift is discernible.  (However, quantization effects are clearly visible \cite{quantization}.)  Likewise, Fig.~\ref{fig:drift_layout}b shows 100 current measurements, also with no discernible drift.  On the other hand, plotting voltage against current, in Fig.~\ref{fig:drift_layout}d \emph{does} show a (negative) correlation.  The sign of the correlation is puzzling, in that one expects a true current fluctuation to correlate positively with voltage (a higher current implies a higher measured voltage).  In any case, the 100 points were averaged offline, after the data were saved to disk, using Igor Pro's \texttt{Decimate} procedure.  From Fig.~\ref{fig:drift_layout}c, we estimated that the standard deviation of the average of 100 measurements is 0.5 mV.
+% Notice that "Figure" is written out when it starts a sentence but is abbreviated as "Fig." when in the interior of a sentence.
+
+\begin{figure}[h] 
+  \centering
+  \includegraphics[width=4.5in]{drift_layout}   
+     \caption{Statistics of voltage measurements across the lamp.  (a)  Data collected 1 s after transient.  (b)--(d) Data collected 10 s after transient.  (b) Current data.  (c) Voltage data (to compare directly to (a)).  (d) Voltage-current plot shows a negative correlation.}
+     \label{fig:drift_layout}
+\end{figure}
+
+\section{Results}
+\label{sec:results}
+
+Figure~\ref{fig:lamp_layout}a shows the voltage measured across the lamp as a function of applied current, as measured using the 10-s waiting protocol described in Sec.~\ref{sec:methods}.  The statistical errors (error bars) are not shown because they are smaller than the markers used to show the points.  Figure~\ref{fig:lamp_layout}b shows the resistance as a function of the applied power.  The resistance was computed by fitting a polynomial through the voltage-current curve of Fig.~\ref{fig:lamp_layout}a and then calculating the local slope via the derivative of the fit polynomial.  (One could also directly differentiate the data using finite differences, but this amplifies the effects of noise.)  We plotted the resistance vs.~power by calculating $VI$, the product of the voltage across times the current through the examined resistor at each value of $R$ the local resistance.  Note how the resistance increases from just under 50 $\Omega$ at 0 power to about 250 $\Omega$ at 1.5 W---a five-fold increase.  The sensitivity of the resistance $\dd{R} / \dd{P}$ to power changes at powers of 0 and 0.5 W was evaluated.  We found values of 2400 $\pm$ 500 $\Omega$/W and 110 $\pm$ 2 $\Omega$/W, respectively. 
+% Note the use of Roman d in derivatives; again, the differential is not a variable and should not be in italics.
+
+\begin{figure}[h] 
+  \centering
+  \includegraphics[width=4.0in]{lamp_layout}   
+     \caption{(a) Voltage-current profile for the lamp.  (b) Resistance vs.~power (inferred from curve fit, see text).  Dotted lines are fits to local slopes at $P = 0$ and 0.5 W, giving $\dd{R} / \dd{P} = 2400 \pm 500~\Omega$/W and $110 \pm 2~\Omega$/W, respectively.  Plot at top of (a) shows fit residuals.}
+     \label{fig:lamp_layout}
+\end{figure}
+
+Because the change in resistance was so large, we wondered whether it was possible to detect changes in the resistance of an ``ordinary" resistance.  A voltage-current plot analogous to that measured for the lamp in Fig.~\ref{fig:lamp_layout}a is plotted Fig.~\ref{fig:resistor_fit}a.  To the eye, the relationship is indistinguishable from a straight line, but a more careful analysis shows otherwise.  In Fig.~\ref{fig:resistor_fit}b, we plot the normalized statistic $\chi^2 /\nu$ against the number of fit parameters $N$ for polynomial fits of order $N$.  Here, $\nu$ is the number of degrees of freedom in the fit $N_\textrm{dat} - N$, with $N_\textrm{dat} = 89$ the number of data points.  The constant term in the polynomial fits was fixed to be zero on physical grounds (no voltage is expected if no current flows through the resistor), giving $N$ fit parameters for an $N$th-order polynomial. A standard deviation of $0.5$ mV, as discussed in Sec.~\ref{sec:methods}, was used.  As can be seen in Fig.~\ref{fig:resistor_fit}b, the estimated standard deviation decreases rapidly until it reaches unity at $N= 4$.  (Recall that for $\nu \gg 1$, which is the case here, the distribution of the $\chi^2 /\nu$ statistic is nearly Gaussian, with mean 1 and standard deviation $\sqrt{2/\nu}$.)  This standard is first met for $N = 4$, where $\chi^2/\nu = 1.05$, within one $\sigma$ of unity ($\sqrt{2/\nu} = 0.15$).  The residuals shown in Fig.~\ref{fig:resistor_fit}a are actually for $N = 5$, which is the lowest-order fit with residuals that, to the eye, look random.  (There is a small systematic oscillation for $N=4$, the $\chi^2$ statistic notwithstanding.)
+
+\begin{figure}[h] 
+  \centering
+  \includegraphics[width=4.0in]{resistor_fit}   
+     \caption{(a) IV curve for the metal-film resistor.  (b)  Estimated standard deviation of curve-fit residuals vs.~the number of terms $N$ in a polynomial fit.  (c) Resistance vs.~power.  Dotted lines are fits to local slopes at $P = 0$ and 0.5 W, giving $\dd{R} / \dd{P} = 22.1 \pm 0.2~\Omega$/W and $14.22 \pm 0.02~\Omega$/W, respectively.  Plot at top of (a) shows fit residuals.}
+     \label{fig:resistor_fit}
+\end{figure}
+
+The main point of Fig.~\ref{fig:resistor_fit}b is to demonstrate that the data in Fig.~\ref{fig:resistor_fit}a are not well described by a straight line, so that the variation of resistance with power is statistically significant. (For $N=1$, a straight line, the normalized $\chi^2$ is $10^4$, which is significantly different from 1!)  Figure~\ref{fig:resistor_fit}c shows the resistance of the metal-film resistor as a function of power dissipated, in analogy to Fig.~\ref{fig:lamp_layout}b.  The resistance varies from 60.4 to 68.5 $\Omega$ as the power is increased from 0 to 0.5 W.  The local slopes $\dd{R} / \dd{P}$ are $22.1 \pm 0.2~\Omega$/W and $14.22 \pm 0.02~\Omega$/W, respectively.
+
+\section{Discussion}
+We have seen that the filament of a lamp undergoes a dramatic 5-fold increase in its resistance as the power is varied from 0 to 1 W (still much less than its rated power of 25 W).  At the same time, even an ordinary resistor varies by nearly 15\% when 0.6 W is dissipated through it.  An immediate conclusion is that it is quite easy to drive currents through a resistor that are large enough that Ohm's Law becomes invalid.  We still have not answered our original question, however, of what determines the limits of validity of Ohm's Law (and other laws like it).  For example, in this work, we have measured the variation of two resistors that have nearly identical zero-power resistance (60 and 47 $\Omega$, for the lamp and metal-film resistor, respectively).  Yet the variation of resistance with power, $\dd{R} / \dd{P}$, differs greatly (Table~\ref{dRdP-table}.)
+
+\begin{table}[h] %[h] fixes table placement to this spot in the text
+  \begin{center}
+    \begin{tabular}{ r|c|c } % r=right, c=center, l=left
+                   % one letter should be input for each column
+                   % { r|c|c } puts vertical lines between columns
+%        \hline \hline
+                      & $\dv{R}{P}$ (0W) &  $\dv{R}{P}$ (0.5W)  \\ 
+           \hline \hline
+        lamp~  & $2400 \pm 500$  &     $110 \pm 2$        \\ \hline
+         metal-film resistor~      & $22.1 \pm 0.2$  &  $14.22 \pm 0.02$   \\ 
+%         \hline \hline
+    \end{tabular}
+    \end{center}
+\caption{ \label{dRdP-table}Resistance sensitivity, in units of $\Omega$/W,  for a lamp and a metal-film resistor.}
+\end{table}
+
+An obvious factor that might explain the difference is the change in temperature.  At 0.5~W dissipation, the lamp's filament was red hot.  The colour of a heated object is linked to its temperature approximately through a black-body relationship, and ``red hot" corresponds to temperatures of 500--1000 $^\circ$C  \cite{blackbody}.  Taking a temperature of 750 $^\circ$C, we can try to estimate the resistance change from measured variations of the resistivity of materials with temperature.  From standard tables of the resistance of platinum resistors, the ratio of resistance at $750 \pm 250~^\circ$C to that of 20 $^\circ$C is 3.3 $\pm$ 1.2 \cite{RTDtable}.  This is consistent with the ratio of the lamp's resistance, 4.38 $\pm$ 0.05, as deduced from Fig.~\ref{fig:lamp_layout}b: at $P$ = 0.5 W, $R$ = 221 $\pm$ 2 $\Omega$, while at $P$ = 0 W, $R$ =  50.7 $\pm$ 0.5 $\Omega$.  It is not clear what metal the metal-film resistor uses.  If we assume that its characteristics are similar to platinum, a resistance ratio of 69.0/60.4 = 1.14 corresponds to about 50 $\pm$ 5~$^\circ$C.  This is consistent with the qualitative observation that the metal film resistor was warm when dissipating $P = 0.5$ W.  Because the element is insulated by plastic, it is quite possible for it to be at 50~$^\circ$C while the outside is only at about 40~$^\circ$C.  
+
+In thinking more about the effect we observed in the metal-film resistor, we realized that our experiment had a flaw insofar as the analysis of the metal-film resistor is concerned.  If there is a temperature rise that changes its resistance, we may expect a similar rise in the reference resistor, $R_1$.  Indeed, since its nominal resistance is 221 $\Omega$, we expect the effect to be more than three times as large!  Thus, our inferences about the metal-film resistor are only qualitative.  Because the reference resistor also warms and thus also increases its resistance, we expect the true effect to be \textit{larger} than what was measured.  In any case, the main point remains valid, that ordinary resistors also show measurable deviations from Ohm's Law at modest power dissipations (0.5 W here).  In retrospect, we could have eliminated the first resistor by programming the power supply to regulate current rather than voltage.  The literature of the power-supply that we used (Sec.~\ref{sec:methods}) claims that the current would be accurate to 1\%.  Any follow-up work should use this method.
+
+Having argued that the difference between the behaviour of the lamp and of the metal-film resistor is linked to differences in temperature, we can now ask why the temperature of a lamp's filament varies so much while that of the metal-film resistor varies so little, even though the zero-power is similar and similar currents are passed through.  The relation $P~=~I^2 R$ implies that the same amount of power is dissipated; yet the temperature rise is quite different.  An obvious difference between the two objects is that a lamp's filament is encased in a vacuum (or low-pressure) bulb while a metal-film resistor is encased in plastic.  Since the plastic will conduct heat much more efficiently than the low-pressure gas (where, presumably radiative heat transfer dominates), it is plausible that the difference in temperatures may be linked to the differences in isolation of the dissipating element.  More precisely, in steady state, we expect that the power dissipated by the resistor is balanced by the heat flows to the external environment.  The temperature rise is then determined by the rate of heat evacuation needed to balance the input by the lamp filament or resistor.  While a detailed study is beyond the scope of this report, the explanation is qualitatively plausible.
+
+ 
+\section{Conclusion}
+
+In this report, we have tested the range of applicability of Ohm's Law.  We constructed a circuit to test Ohm's Law for a lamp filament and for a metal-film resistor and wrote software to collect and analyze current-voltage data.  After a preliminary study of drifts and statistical errors, we found that the voltage-current plot of a resistor was obviously nonlinear.  A similar study of the metal-film resistor showed that, although the current-voltage plot was a straight line to the eye, it showed statistically significant curvature, corresponding to a variable resistance effect that was similar to---but much weaker than---the effect observed with the lamp filament.  We then argued that the variations of resistance may be plausibly explained by temperature differences in the two objects.  Moreover, the very different temperatures achieved by the filament and the metal-film resistors at identical power dissipations may be traced to differences in the insulation (near vacuum for the filament and plastic for the metal-film resistor).
+
+We thus conclude that one way for Ohm's Law to break down is that the current leads to a temperature rise and the temperature rise changes the material properties (i.e., the resistivity).  But this is still not a complete answer to the question of what sets the limits of validity of Ohm's Law.  We can imagine an experiment where we dissipate large amounts of power through a resistor while minimizing the temperature rise.  For example, we could break open the lamp and immerse its filament in a bath of flowing oil to carry away heat.  Would Ohm's Law then apply for arbitrarily large currents?  Such questions require further study.
+
+As a final parenthetical remark, the data collected---and the conclusions reached---depend in an essential way on the computerization of the data acquisition and subsequent processing.  We would not have been able to come so convincingly to the same conclusions---particularly for the metal-film resistor---had we depended only on manual measurements with current- and volt-meters.
+
+\section{Acknowledgments}
+I thank Jeff Rudd for his cheerful and able assistance and Yi Deng and Barbara Frisken for a careful reading of the manuscript.
+
+% Note that I have put in all these commands by hand for the bibliography below.  That works and is simple if you have only a few references.  Otherwise, there are database programs (such as BibDesk, for MacOS) that do this for you.  You probably will not have enough references to need to use such programs.
+
+\begin{thebibliography}{99}
+
+\bibitem{ohm}  R.~D.~Knight, \href{https://www.pearson.com/us/higher-education/program/Knight-Modified-Mastering-Physics-with-Pearson-e-Text-Standalone-Access-Card-for-Physics-for-Scientists-and-Engineers-A-Strategic-Approach-with-Modern-Physics-4th-Edition/PGM119478.html}{\textit{Physics for Scientists and Engineers:  A Strategic Approach}, Pearson Education, 2004}.  See Sec.~31.1.
+
+\bibitem{randomarticle} C. Browne, A.~J.~P.~Garner, O.~C.~O.~Dahlsten, and V.~Vedral, Guaranteed Energy-Efficient Bit Reset in Finite Time, \href{https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.113.100603}{Phys. Rev. Lett. \textbf{113}, 100603 (2014)}.
+
+\red{The above is a random reference chosen to illustrate the general format for a journal article.  Note the use of a abbreviated journal title, with the abbreviation being a standard one.  The volume is in bold font.  The hyperlink points to the official journal site for the article (and publisher site for a book).}
+
+\bibitem{schroeder}  D.~V.~Schroeder, \textit{An Introduction to Thermal Physics}, Addison Wesley Longman, 2000.  See pp.~38 and 47.
+
+\bibitem{newton}  Newton's law of cooling states that the rate of temperature change of an object is proportional to the temperature difference the object maintains with its environment.  It is a simple consequence of Fourier's law \cite{schroeder}.
+
+\bibitem{quantization} The DAQ voltage input has 14-bit resolution on $\pm$ 20 V.  Using it on a range of 0 to 20 V, as we did, should thus give 13-bit resolution,  corresponding to quantization levels of (20 V)/$2^{13}$ = 2.44 mV.  In fact, the measured quantization is 2.55 mV.  In literature on the M-Series DAQs from National Instruments (but not for the USB-6009 used here), the company states that the quantization is increased about 5\% in order to increase the accuracy of an internal calibration routine.  Since ($2.55-2.44)/2.44 = 4.5$\%, this probably explains the discrepancy.
+
+\bibitem{blackbody} \url{http://hypertextbook.com/facts/2000/StephanieLum.shtml}. \\ \red{(This isn't really a proper reference.  You should find a more traditional source.)}
+
+\bibitem{RTDtable} Platinum RTDs Temperature Sensors Resistance and Accuracy Tables, Honeywell Corp., available at \url{http://content.honeywell.com/sensing/prodinfo/temperature/lit.htm}.  The table's upper range is actually 750$~^\circ$C, so that we cannot evaluate the resistance at 1000$~^\circ$C.  The uncertainty in our resistance-ratio estimate of 1.2 is thus obtained by looking at the resistances at 500 and 750$~^\circ$C only.  We do not expect the resistance to vary linearly over this 500$~^\circ$C range; on the other hand, we do not expect this approximation to affect the qualitative conclusion that the observed resistance ratio falls within the uncertainties of the estimate based on the referenced table of values.
+
+\end{thebibliography}
+
+\newpage
+\section{Comments}
+
+The following comments are not part of the report itself but are included to give you more perspective on how this particular report is structured.
+
+\begin{itemize}
+
+\item  Notice that the report has an overall narrative structure---the exploration of how Ohm's law fails when currents are too high.  Reports (or journal articles) are always \textit{about} something, and their structure should support their overall message.
+
+%\item There is no Theory section in this report (and there is only one display equation in the entire paper) because the theoretical issues are so simple that it is clearest to bring them up as needed in the Procedure and Results sections.  If you needed to make a longer discussion of some theoretical points, you should by all means have a section devoted to them.  In general, in that section, you should summarize (and give references to) derivations that are standard and can be found in a textbook or article.  If there is some result that is unique to your particular work, then including its derivation is appropriate.
+
+\item Active vs.~passive voice.  You may notice that I mostly use the active voice.  In general, the active voice is more direct and forceful and leads to a more readable paper.  On the other hand, the passive voice puts more emphasis on the results from an action as opposed to the doer.  (Example:  ``the temperature was measured to be 20 $^\circ$C" vs. ``I measured the temperature to be 20 $^\circ$C.")  Normally, a report will use both active and passive voices in its exposition.  In general, I feel that students tend to overuse the passive voice; however, it can also be awkward to have too many sentences of the form ``I did this" and ``I did that," particularly when the subject is not important.  (In the temperature example above, you might prefer the passive version, as the temperature is probably important and the details of such a standard measurement less so.)   Using the active voice is particularly important for key moments of the paper (``We conclude that").  It is cowardly to say ``Mistakes were made''. Note that Dr. Frisken tends to reduce the use of active voice while editing. 
+
+ 
+\item The report has both quantitative and qualitative parts.  For example, in the discussion about the temperature rise, we turned a qualitative observation (``the filament is red-hot") into a quantitative prediction for the temperature rise.  Admittedly, the uncertainty in the estimate is large (about 30\%), but it is good enough to be useful.  On the other hand, while it is good to be quantitative when possible, there is no point in being quantitative just for its own sake.  The estimate for the metal-film resistor had so many uncertainties---arising from the difference in the ``felt" temperature on the outside and the resistive element on the inside and from the systematic error in neglecting the effect of $R_1$---that there seemed little point in being as quantitative as we were for the other estimate.  But in some parts of the report, such as the observation of deviations from Ohm's Law for the metal-film resistor, careful use of quantitative arguments is essential.
+
+\item There are several unresolved points in this report.  These include small technical points such as the discrepancy between the estimated and measured voltage quantization levels (2.44 vs.~2.55 mV, the discussion being hidden away in an endnote) and the negative sign of the correlation between current and voltage measurements after a 10~s wait.  Since these points are not important for the main message of the article, it is ok to leave them unresolved.  Choosing what to talk about and what not to talk about is part of the art of writing a good paper.  Other points---redoing the metal-film measurements to eliminate the systematic errors due to $R_1$---were left unresolved because we did not have time to go back and redo the experiment better.  Had this been a ``real" article, we would have been forced to go back and redo the experiments the right way.  Journal  editors and referees will not tolerate easily fixed mistakes.  Finally, deeper points---such as what happens if you keep the temperature fixed but increase the current---would require a completely different set of experiments and a discussion of them.  Knowing when to stop is important, too.
+
+\item The issue of the systematic error in the calculation of currents using $R_1$ could have been eliminated through better planning.  The measurements of $R(P)$ for the metal-film resistor were only qualitative because we compute the current by measuring the voltage drop across $R_1$, which must also be showing a similar effect.  Anticipating such issues is part of what makes up experimental skill.  Dealing with the issues that you did not anticipate takes a different kind of skill.  Good reports will show one or the other, or both.  In my defense, this mistake would not change the qualitative conclusions of the report and, in that sense, is not of great importance.
+
+\item You might argue that, in places, the report includes too much information and that shortening it would clarify the main narrative (about the limitations of Ohm's Law).  Do we really need two figures (Figs.~\ref{fig:lamp_transient} and \ref{fig:drift_layout}) to explain the need to wait 10 s after changing the current?  Probably not.  On the other hand, having taken both measurements (and having prepared both figures), I wanted to get a return for my work!  In a real publication, that is not a good enough reason, and one would  cut one or both of these figures or combine them in some way; however, in a report aimed at an instructor or professor, letting them know that you did the work (and thought about the issues) may not be a bad idea....  In the end, you have to balance the clarity of a short, direct presentation against the completeness and thoroughness of a report that shows that you worried about various issues.  It's your call.
+
+\item One strategy for dealing with side issues is to put them in the endnotes, as we did in several places.  Use this sparingly, as readers tend not to bother to look at the endnotes!  (Instructors are another story...)  But if there is something that should be on paper somewhere and it would distract from the main flow of the narrative, the endnotes are a good place to put them.  We could also use footnotes, as an alternative to endnotes.  The \textit{Physical Review} style that we chose does not allow footnotes (journal rule), but you can have traditional footnotes by adding \texttt{nofootinbib} as a class option in the \texttt{documentclass} command.  See the APS RevTex 4.2 Author's Guide for more details.
+
+\item Notice that none of the captions refers to the colours of lines.  You should do this if the report will be printed out on a laser printer that prints only black.  If you have access to a colour printer, then it's clearer and easier to use colours both in the figure and in the caption.  (Colour figures can clarify a plot or sketch greatly.  Another fallback is to use shades of grey, as in Fig.~\ref{fig:schematic}.)  As discussed in class, you can misuse colours, too.  Beware!
+
+\item And, just because we were light on equations, here are Maxwell's equations:
+% the "align" command needs the amsmath package (included at the top)
+% the \pdv command is from the physics package
+\begin{align}
+	\nabla \cdot \mathbf{E} &= \frac{\rho}{\epsilon_{0}} \nonumber\\
+	\nabla \times \mathbf{E} &= - \pdv{\mathbf{B}}{t} \\
+	\nabla \cdot \mathbf{B} &= 0 &&\text{math comment example} \nonumber\\
+	\nabla \times \mathbf{B} &= \mu_{0} \mathbf{J} + \mu_{0}
+	\epsilon_{0}  \pdv{\mathbf{E}}{t} && \text{comments are aligned} \,.
+\label{eq:Maxwell}
+\end{align}
+
+
+\end{itemize}
+
+\end{document}
