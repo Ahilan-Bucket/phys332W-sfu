@@ -4,33 +4,38 @@ ANALYSIS SUMMARY
 
 Video: 3um-0_5p-4_9pstock-0pgly-trial2.avi
 Date: 2026-02-24
-Bead diameter: 5.0 um
-Glycerol: 20.0%
+Bead diameter: 3.0 um
+Solute: 0.0% Glycerol
 Temperature: 21.0 C (294.15 K)
-Viscosity: 0.004338 Pa.s
+Viscosity: 0.981 mPa.s (0.000981 Pa.s)
 Pixel size: 0.0684 um/px (68.4 nm/px)
-Frame rate: 226 fps
+Frame rate: 30.0 fps (read from file)
+dt: 33.33 ms
 
 Tracking:
   Total frames: 240
-  Valid tracks: 172
+  Valid tracks: 264
   Segments used: 10
-  Total displacement steps: 606
+  Total displacement steps: 2327
 
 Diffusion Coefficients (um^2/s):
-  Method 1 (Direct Variance): 0.7887 +/- 0.0364
-  Method 2 (Gaussian Fit):     0.1934 +/- 0.0707
-  Method 3 (MSD Slope):        0.5603 +/- 0.2542
-  Stokes-Einstein (theory):    0.0199
+  Method 1 (Direct Variance): 0.1317 +/- 0.0377
+  Method 2 (Gaussian Fit):     0.0372 +/- 0.0045
+  Method 3 (MSD Slope):        0.1397 +/- 0.0103
 
-Deviations from Stokes-Einstein:
-  Direct Variance: +3869.5%
-  Gaussian Fit: +873.4%
-  MSD Slope: +2719.7%
+Theory (Stokes-Einstein):
+  D_0 (base):      0.1465 um^2/s
+  Faxen factor:     0.9796 (midplane, h=41.2 um)
+  D_theory (final): 0.1435 um^2/s
+
+Deviations from Theory (S-E + Faxen):
+  Direct Variance: -8.2%
+  Gaussian Fit: -74.1%
+  MSD Slope: -2.6%
 
 MSD Exponent:
-  alpha = 0.758 +/- 0.179
-  Classification: SUBDIFFUSIVE (confined)
+  alpha = 0.885 +/- 0.041
+  Classification: DIFFUSIVE (Brownian)
 
 Figures saved to: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Analysis\figures\2026-02-24\3um-0_5p-4_9pstock-0pgly-trial2
 ======================================================================
