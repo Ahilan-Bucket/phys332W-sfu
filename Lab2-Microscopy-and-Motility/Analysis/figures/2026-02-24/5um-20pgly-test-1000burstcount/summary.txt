@@ -1,0 +1,36 @@
+======================================================================
+ANALYSIS SUMMARY
+======================================================================
+
+Video: 5um-20pgly-test-1000burstcount.avi
+Date: 2026-02-24
+Bead diameter: 5.0 um
+Glycerol: 20.0%
+Temperature: 21.0 C (294.15 K)
+Viscosity: 0.004338 Pa.s
+Pixel size: 0.0684 um/px (68.4 nm/px)
+Frame rate: 226 fps
+
+Tracking:
+  Total frames: 240
+  Valid tracks: 8
+  Segments used: 8
+  Total displacement steps: 221
+
+Diffusion Coefficients (um^2/s):
+  Method 1 (Direct Variance): 3.6384 +/- 0.6814
+  Method 2 (Gaussian Fit):     1.2648 +/- 0.3891
+  Method 3 (MSD Slope):        3.2620 +/- 0.0000
+  Stokes-Einstein (theory):    0.0199
+
+Deviations from Stokes-Einstein:
+  Direct Variance: +18211.0%
+  Gaussian Fit: +6265.3%
+  MSD Slope: +16316.9%
+
+MSD Exponent:
+  alpha = 0.558 +/- 0.214
+  Classification: SUBDIFFUSIVE (confined)
+
+Figures saved to: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Analysis\figures\2026-02-24\5um-20pgly-test-1000burstcount
+======================================================================

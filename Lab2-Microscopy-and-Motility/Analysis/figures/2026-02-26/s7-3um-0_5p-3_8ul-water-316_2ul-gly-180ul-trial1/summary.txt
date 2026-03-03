@@ -1,0 +1,36 @@
+======================================================================
+ANALYSIS SUMMARY
+======================================================================
+
+Video: s7-3um-0_5p-3_8ul-water-316_2ul-gly-180ul-trial1.avi
+Date: 2026-02-26
+Bead diameter: 3.0 um
+Glycerol: 36.3%
+Temperature: 21.0 C (294.15 K)
+Viscosity: 0.014712 Pa.s
+Pixel size: 0.0684 um/px (68.4 nm/px)
+Frame rate: 226 fps
+
+Tracking:
+  Total frames: 120
+  Valid tracks: 15
+  Segments used: 10
+  Total displacement steps: 373
+
+Diffusion Coefficients (um^2/s):
+  Method 1 (Direct Variance): 1.1267 +/- 0.0884
+  Method 2 (Gaussian Fit):     0.2799 +/- 0.0025
+  Method 3 (MSD Slope):        1.0835 +/- 0.5171
+  Stokes-Einstein (theory):    0.0098
+
+Deviations from Stokes-Einstein:
+  Direct Variance: +11437.6%
+  Gaussian Fit: +2765.7%
+  MSD Slope: +10994.4%
+
+MSD Exponent:
+  alpha = 0.753 +/- 0.169
+  Classification: SUBDIFFUSIVE (confined)
+
+Figures saved to: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Analysis\figures\2026-02-26\s7-3um-0_5p-3_8ul-water-316_2ul-gly-180ul-trial1
+======================================================================

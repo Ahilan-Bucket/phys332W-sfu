@@ -1,0 +1,36 @@
+======================================================================
+ANALYSIS SUMMARY
+======================================================================
+
+Video: s9-3um-0_5p-24_0ul-water-1200ul-ace-800ul-trial2.avi
+Date: 2026-02-26
+Bead diameter: 3.0 um
+Solute: 40.0% Acetone
+Temperature: 21.0 C (294.15 K)
+Viscosity: 0.000620 Pa.s
+Pixel size: 0.0684 um/px (68.4 nm/px)
+Frame rate: 226 fps
+
+Tracking:
+  Total frames: 120
+  Valid tracks: 36
+  Segments used: 10
+  Total displacement steps: 349
+
+Diffusion Coefficients (um^2/s):
+  Method 1 (Direct Variance): 2.8184 +/- 0.9008
+  Method 2 (Gaussian Fit):     1.0127 +/- 0.3769
+  Method 3 (MSD Slope):        2.1950 +/- 0.9709
+  Stokes-Einstein (theory):    0.2317
+
+Deviations from Stokes-Einstein:
+  Direct Variance: +1116.3%
+  Gaussian Fit: +337.0%
+  MSD Slope: +847.3%
+
+MSD Exponent:
+  alpha = 0.522 +/- 0.131
+  Classification: SUBDIFFUSIVE (confined)
+
+Figures saved to: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Analysis\figures\2026-02-26\s9-3um-0_5p-24_0ul-water-1200ul-ace-800ul-trial2
+======================================================================

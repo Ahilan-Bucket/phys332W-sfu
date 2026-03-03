@@ -14,23 +14,23 @@ Frame rate: 226 fps
 Tracking:
   Total frames: 240
   Valid tracks: 25
-  Segments used: 2
-  Total displacement steps: 57
+  Segments used: 10
+  Total displacement steps: 172
 
 Diffusion Coefficients (um^2/s):
-  Method 1 (Direct Variance): 0.3335 +/- 0.1487
-  Method 2 (Gaussian Fit):     0.0195 +/- 0.0045
-  Method 3 (MSD Slope):        -0.0114 +/- 0.0348
+  Method 1 (Direct Variance): 2.8335 +/- 0.6052
+  Method 2 (Gaussian Fit):     0.2364 +/- 0.0696
+  Method 3 (MSD Slope):        3.4338 +/- 0.0000
   Stokes-Einstein (theory):    0.1465
 
 Deviations from Stokes-Einstein:
-  Direct Variance: +127.7%
-  Gaussian Fit: -86.7%
-  MSD Slope: -107.8%
+  Direct Variance: +1834.1%
+  Gaussian Fit: +61.4%
+  MSD Slope: +2243.9%
 
 MSD Exponent:
-  alpha = 0.452 +/- 0.063
+  alpha = 0.193 +/- 0.742
   Classification: SUBDIFFUSIVE (confined)
 
-Figures saved to: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Analysis\figures\2026-02-24\3um-0_5p-4_9pstock-0pgly-trial1
+Figures saved to: d:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Analysis\figures\2026-02-24\3um-0_5p-4_9pstock-0pgly-trial1
 ======================================================================
