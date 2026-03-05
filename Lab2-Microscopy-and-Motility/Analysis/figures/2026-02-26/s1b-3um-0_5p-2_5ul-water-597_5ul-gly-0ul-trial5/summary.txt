@@ -5,31 +5,42 @@ ANALYSIS SUMMARY
 Video: s1b-3um-0_5p-2_5ul-water-597_5ul-gly-0ul-trial5.avi
 Date: 2026-02-26
 Bead diameter: 3.0 um
-Glycerol: 0.0%
+Solute: 0.0% Glycerol
 Temperature: 21.0 C (294.15 K)
-Viscosity: 0.000981 Pa.s
+Viscosity: 0.981 mPa.s (0.000981 Pa.s)
 Pixel size: 0.0684 um/px (68.4 nm/px)
-Frame rate: 226 fps
+Frame rate: 29.0 fps (read from file)
+dt: 34.48 ms
 
 Tracking:
   Total frames: 120
-  Valid tracks: 9
-  Segments used: 4
-  Total displacement steps: 48
+  Valid tracks: 2
+  Segments used: 1
+  Total displacement steps: 11
 
-Diffusion Coefficients (um^2/s):
-  Method 1 (Direct Variance): 4.8963 +/- 0.4939
-  Method 2 (Gaussian Fit):     3.0253 +/- 1.1840
-  Method 3 (MSD Slope):        4.6754 +/- 0.0000
-  Stokes-Einstein (theory):    0.1465
+Diffusion Coefficients (um^2/s) — noise-corrected:
+  Method 1 (Direct Variance): 2.7652 +/- 0.2051
+  Method 2 (Gaussian Fit):     2.3549 +/- 0.2051
+  Method 3 (MSD Slope):        1.4115 +/- 0.0000
 
-Deviations from Stokes-Einstein:
-  Direct Variance: +3242.2%
-  Gaussian Fit: +1965.0%
-  MSD Slope: +3091.4%
+Noise Correction:
+  sigma_noise: 0.06163 um (0.901 px)
+  D_var raw:   2.8202 -> corrected: 2.7652 um^2/s
+  D_gauss raw: 2.4100 -> corrected: 2.3549 um^2/s
+  D_msd:       1.4115 (self-correcting via MSD intercept)
+
+Theory (Stokes-Einstein):
+  D_0 (base):      0.1465 um^2/s
+  Faxen factor:     0.9796 (midplane, h=41.2 um)
+  D_theory (final): 0.1435 um^2/s
+
+Deviations from Theory (S-E + Faxen):
+  Direct Variance: +1826.9%
+  Gaussian Fit: +1541.0%
+  MSD Slope: +883.6%
 
 MSD Exponent:
-  alpha = 0.530 +/- 0.920
+  alpha = 0.107 +/- 0.000
   Classification: SUBDIFFUSIVE (confined)
 
 Figures saved to: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Analysis\figures\2026-02-26\s1b-3um-0_5p-2_5ul-water-597_5ul-gly-0ul-trial5

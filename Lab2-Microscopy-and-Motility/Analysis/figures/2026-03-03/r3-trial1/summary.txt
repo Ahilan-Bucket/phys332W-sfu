@@ -1,0 +1,47 @@
+======================================================================
+ANALYSIS SUMMARY
+======================================================================
+
+Video: r3-trial1.avi
+Date: 2026-03-03
+Bead diameter: 3.0 um
+Solute: 0.0% Glycerol
+Temperature: 19.0 C (292.15 K)
+Viscosity: 1.030 mPa.s (0.001030 Pa.s)
+Pixel size: 0.0684 um/px (68.4 nm/px)
+Frame rate: 29.0 fps (read from file)
+dt: 34.48 ms
+
+Tracking:
+  Total frames: 240
+  Valid tracks: 10
+  Segments used: 8
+  Total displacement steps: 952
+
+Diffusion Coefficients (um^2/s) — noise-corrected:
+  Method 1 (Direct Variance): 0.1531 +/- 0.2302
+  Method 2 (Gaussian Fit):     0.0461 +/- 0.2302
+  Method 3 (MSD Slope):        0.0401 +/- 0.0317
+
+Noise Correction:
+  sigma_noise: 0.06163 um (0.901 px)
+  D_var raw:   0.2082 -> corrected: 0.1531 um^2/s
+  D_gauss raw: 0.0922 -> corrected: 0.0461 um^2/s
+  D_msd:       0.0401 (self-correcting via MSD intercept)
+
+Theory (Stokes-Einstein):
+  D_0 (base):      0.1385 um^2/s
+  Faxen factor:     0.9796 (midplane, h=41.2 um)
+  D_theory (final): 0.1357 um^2/s
+
+Deviations from Theory (S-E + Faxen):
+  Direct Variance: +12.8%
+  Gaussian Fit: -66.0%
+  MSD Slope: -70.5%
+
+MSD Exponent:
+  alpha = 0.054 +/- 0.294
+  Classification: SUBDIFFUSIVE (confined)
+
+Figures saved to: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Analysis\figures\2026-03-03\r3-trial1
+======================================================================

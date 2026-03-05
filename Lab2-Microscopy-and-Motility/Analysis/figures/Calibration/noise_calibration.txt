@@ -1,0 +1,13 @@
+# === NOISE CALIBRATION RESULTS ===
+# Processed: 2026-03-04T18:10:32.271547
+# Videos: noise-calibration_slide-1.avi, noise-calibration_slide-2.avi, noise-calibration_slide-3.avi
+
+[results]
+sigma_noise_px = 0.901015
+sigma_noise_um = 0.061629
+v_noise_um_s = 1.787253
+n_displacements = 1108
+n_videos = 3
+avg_fps = 29.0
+processed = 2026-03-04T18:10:32.271547
+

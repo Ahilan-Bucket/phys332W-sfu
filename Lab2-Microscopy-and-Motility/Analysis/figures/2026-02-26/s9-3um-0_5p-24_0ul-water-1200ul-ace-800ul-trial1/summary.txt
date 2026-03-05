@@ -7,29 +7,40 @@ Date: 2026-02-26
 Bead diameter: 3.0 um
 Solute: 40.0% Acetone
 Temperature: 21.0 C (294.15 K)
-Viscosity: 0.000620 Pa.s
+Viscosity: 0.620 mPa.s (0.000620 Pa.s)
 Pixel size: 0.0684 um/px (68.4 nm/px)
-Frame rate: 226 fps
+Frame rate: 29.0 fps (read from file)
+dt: 34.48 ms
 
 Tracking:
   Total frames: 120
-  Valid tracks: 31
-  Segments used: 10
-  Total displacement steps: 270
+  Valid tracks: 5
+  Segments used: 3
+  Total displacement steps: 208
 
-Diffusion Coefficients (um^2/s):
-  Method 1 (Direct Variance): 2.4699 +/- 0.1944
-  Method 2 (Gaussian Fit):     0.5569 +/- 0.1196
-  Method 3 (MSD Slope):        1.8920 +/- 2.0632
-  Stokes-Einstein (theory):    0.2317
+Diffusion Coefficients (um^2/s) — noise-corrected:
+  Method 1 (Direct Variance): 0.7393 +/- 0.3057
+  Method 2 (Gaussian Fit):     0.0065 +/- 0.3057
+  Method 3 (MSD Slope):        0.3955 +/- 0.1307
 
-Deviations from Stokes-Einstein:
-  Direct Variance: +965.9%
-  Gaussian Fit: +140.3%
-  MSD Slope: +716.5%
+Noise Correction:
+  sigma_noise: 0.06163 um (0.901 px)
+  D_var raw:   0.7943 -> corrected: 0.7393 um^2/s
+  D_gauss raw: 0.0131 -> corrected: 0.0065 um^2/s
+  D_msd:       0.3955 (self-correcting via MSD intercept)
+
+Theory (Stokes-Einstein):
+  D_0 (base):      0.2317 um^2/s
+  Faxen factor:     0.9796 (midplane, h=41.2 um)
+  D_theory (final): 0.2270 um^2/s
+
+Deviations from Theory (S-E + Faxen):
+  Direct Variance: +225.7%
+  Gaussian Fit: -97.1%
+  MSD Slope: +74.2%
 
 MSD Exponent:
-  alpha = 0.624 +/- 0.295
+  alpha = 0.420 +/- 0.146
   Classification: SUBDIFFUSIVE (confined)
 
 Figures saved to: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Analysis\figures\2026-02-26\s9-3um-0_5p-24_0ul-water-1200ul-ace-800ul-trial1

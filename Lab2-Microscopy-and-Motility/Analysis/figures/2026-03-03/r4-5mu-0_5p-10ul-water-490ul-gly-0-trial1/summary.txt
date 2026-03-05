@@ -1,0 +1,47 @@
+======================================================================
+ANALYSIS SUMMARY
+======================================================================
+
+Video: r4-5mu-0_5p-10ul-water-490ul-gly-0-trial1.avi
+Date: 2026-03-03
+Bead diameter: 5.0 um
+Solute: 0.0% Glycerol
+Temperature: 19.0 C (292.15 K)
+Viscosity: 1.030 mPa.s (0.001030 Pa.s)
+Pixel size: 0.0684 um/px (68.4 nm/px)
+Frame rate: 29.0 fps (read from file)
+dt: 34.48 ms
+
+Tracking:
+  Total frames: 240
+  Valid tracks: 4
+  Segments used: 4
+  Total displacement steps: 645
+
+Diffusion Coefficients (um^2/s) — noise-corrected:
+  Method 1 (Direct Variance): 0.0753 +/- 0.1430
+  Method 2 (Gaussian Fit):     0.0008 +/- 0.1430
+  Method 3 (MSD Slope):        0.0806 +/- 0.0157
+
+Noise Correction:
+  sigma_noise: 0.06163 um (0.901 px)
+  D_var raw:   0.1303 -> corrected: 0.0753 um^2/s
+  D_gauss raw: 0.0017 -> corrected: 0.0008 um^2/s
+  D_msd:       0.0806 (self-correcting via MSD intercept)
+
+Theory (Stokes-Einstein):
+  D_0 (base):      0.0831 um^2/s
+  Faxen factor:     0.9659 (midplane, h=41.2 um)
+  D_theory (final): 0.0803 um^2/s
+
+Deviations from Theory (S-E + Faxen):
+  Direct Variance: -6.3%
+  Gaussian Fit: -98.9%
+  MSD Slope: +0.3%
+
+MSD Exponent:
+  alpha = 0.234 +/- 0.130
+  Classification: SUBDIFFUSIVE (confined)
+
+Figures saved to: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Analysis\figures\2026-03-03\r4-5mu-0_5p-10ul-water-490ul-gly-0-trial1
+======================================================================

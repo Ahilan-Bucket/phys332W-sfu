@@ -14,14 +14,20 @@ dt: 33.33 ms
 
 Tracking:
   Total frames: 240
-  Valid tracks: 264
-  Segments used: 10
-  Total displacement steps: 2327
+  Valid tracks: 65
+  Segments used: 63
+  Total displacement steps: 7165
 
-Diffusion Coefficients (um^2/s):
-  Method 1 (Direct Variance): 0.1317 +/- 0.0377
-  Method 2 (Gaussian Fit):     0.0372 +/- 0.0045
-  Method 3 (MSD Slope):        0.1397 +/- 0.0103
+Diffusion Coefficients (um^2/s) — noise-corrected:
+  Method 1 (Direct Variance): 0.0483 +/- 0.0280
+  Method 2 (Gaussian Fit):     0.0001 +/- 0.0280
+  Method 3 (MSD Slope):        0.1409 +/- 0.0000
+
+Noise Correction:
+  sigma_noise: 0.06163 um (0.901 px)
+  D_var raw:   0.0966 -> corrected: 0.0483 um^2/s
+  D_gauss raw: 0.0002 -> corrected: 0.0001 um^2/s
+  D_msd:       0.1409 (self-correcting via MSD intercept)
 
 Theory (Stokes-Einstein):
   D_0 (base):      0.1465 um^2/s
@@ -29,13 +35,13 @@ Theory (Stokes-Einstein):
   D_theory (final): 0.1435 um^2/s
 
 Deviations from Theory (S-E + Faxen):
-  Direct Variance: -8.2%
-  Gaussian Fit: -74.1%
-  MSD Slope: -2.6%
+  Direct Variance: -66.3%
+  Gaussian Fit: -99.9%
+  MSD Slope: -1.8%
 
 MSD Exponent:
-  alpha = 0.885 +/- 0.041
-  Classification: DIFFUSIVE (Brownian)
+  alpha = 0.395 +/- 0.204
+  Classification: SUBDIFFUSIVE (confined)
 
 Figures saved to: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Analysis\figures\2026-02-24\3um-0_5p-4_9pstock-0pgly-trial2
 ======================================================================

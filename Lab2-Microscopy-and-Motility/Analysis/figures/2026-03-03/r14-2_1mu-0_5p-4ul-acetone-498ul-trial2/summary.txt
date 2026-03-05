@@ -1,0 +1,47 @@
+======================================================================
+ANALYSIS SUMMARY
+======================================================================
+
+Video: r14-2_1mu-0_5p-4ul-acetone-498ul-trial2.avi
+Date: 2026-03-03
+Bead diameter: 2.1 um
+Solute: 100.0% Acetone
+Temperature: 19.0 C (292.15 K)
+Viscosity: 0.320 mPa.s (0.000320 Pa.s)
+Pixel size: 0.0684 um/px (68.4 nm/px)
+Frame rate: 29.0 fps (read from file)
+dt: 34.48 ms
+
+Tracking:
+  Total frames: 240
+  Valid tracks: 8
+  Segments used: 8
+  Total displacement steps: 1904
+
+Diffusion Coefficients (um^2/s) — noise-corrected:
+  Method 1 (Direct Variance): 0.3062 +/- 0.0052
+  Method 2 (Gaussian Fit):     0.2878 +/- 0.0052
+  Method 3 (MSD Slope):        0.3437 +/- 0.0213
+
+Noise Correction:
+  sigma_noise: 0.06163 um (0.901 px)
+  D_var raw:   0.3612 -> corrected: 0.3062 um^2/s
+  D_gauss raw: 0.3429 -> corrected: 0.2878 um^2/s
+  D_msd:       0.3437 (self-correcting via MSD intercept)
+
+Theory (Stokes-Einstein):
+  D_0 (base):      0.6370 um^2/s
+  Faxen factor:     0.9857 (midplane, h=41.2 um)
+  D_theory (final): 0.6279 um^2/s
+
+Deviations from Theory (S-E + Faxen):
+  Direct Variance: -51.2%
+  Gaussian Fit: -54.2%
+  MSD Slope: -45.3%
+
+MSD Exponent:
+  alpha = 1.000 +/- 0.011
+  Classification: DIFFUSIVE (Brownian)
+
+Figures saved to: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Analysis\figures\2026-03-03\r14-2_1mu-0_5p-4ul-acetone-498ul-trial2
+======================================================================
