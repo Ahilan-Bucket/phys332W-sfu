@@ -137,17 +137,18 @@ Nathan was saying how the Faxen Law's Calcualtion actually has an error
 ### Code review and things to change:
 
 MSD
-The fitting line is only for the start of the points for some reason, bot fot the entire Data points. 
+The fitting line is only for the start of the points for some reason, not fot the entire Data points. 
 - From theory we msut have the first Data point on Zero. In our plot we for soem reaosn have some offset
 To solve this issue I am not sure if we neeed to take the intercept and force it to zero? 
-The current MSD fit uses MSD = slope*t + intercept (free intercept), which produces a non-physical offset at τ=0. This will be changed to MSD = slope*t (forced through origin)??
+The current MSD fit uses MSD = slope*t + intercept (free intercept), which produces a non-physical offset at τ=0. This will be changed to MSD = slope*t (forced through origin)?? Is that ok?
 
+Error Bars
 - Explore if I want to do both error bars and also take up the model that is closest to one of the methods. 
 
 
 - We are only plotting the 25% of Data, why? If you tried to fit 100% of your data, your $D$ value would likely be wrong because the "tail" of your graph—which is just random noise—would tilt the slope of your fit line. By cutting it off at 25%, you ensure that the math is driven by the most "certain" data you have.
 
-- I am working on making the fugures more accurate with the right labels, titles , and accurate scales for professional presetation
+- I am working on making the figures more accurate with the right labels, titles , and accurate scales for professional presentation (Done)
 
 
 ### Nathan wanted to do a Tracker Approach, were working on that to see how that worlks and see if we have bettter accurate Data. 
@@ -167,6 +168,7 @@ In Lab TO do list:
 3. Lab Notebook - Finish the Results today, Analysis. With all Requiments
 
 2. Make final Code with ("Presentation Argument for the Presentationa plots") and get the final Code for the Pipeline. Use this for Neat Figures
+
 
 4. Make the formal Report. 
 
