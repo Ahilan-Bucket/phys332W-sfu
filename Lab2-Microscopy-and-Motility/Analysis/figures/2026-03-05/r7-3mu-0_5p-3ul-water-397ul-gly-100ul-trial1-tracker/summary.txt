@@ -1,0 +1,40 @@
+======================================================================
+ANALYSIS SUMMARY (Pipeline v1.2)
+======================================================================
+
+Input file: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Data\2026-03-05\r7-3mu-0_5p-3ul-water-397ul-gly-100ul-trial1-tracker.txt
+Format: TRACKER | Units: um
+Bead diameter: 3.0 um
+Solute: 20.1% Glycerol
+Temperature: 21.0 C (294.15 K)
+Viscosity (base): 1.701 mPa.s
+Viscosity (Einstein-corrected): 1.701 mPa.s (phi=2.86e-05)
+Pixel size: 0.0684 um/px
+Frame rate: 29.0 fps (from file)
+dt: 34.48 ms
+
+Data: 240 frames, 2 particles, 2 segments, 457 steps
+
+Diffusion Coefficients (um^2/s):
+  Direct Variance: 0.1299 +/- 0.0060
+  Gaussian Fit:    0.1297 +/- 0.0060
+  MSD Slope:       0.1024 +/- 0.0034
+
+Theory (Stokes-Einstein + dual-wall Faxen):
+  D_0 (uncorrected):  0.0845 um^2/s
+  F_mid (midplane):   0.9591 (h=41.2 um)
+  F_wall (quarter):   0.9071 (h=10.3 um)
+  D_mid:              0.0810 um^2/s
+  D_wall:             0.0766 um^2/s
+
+Deviations from D_mid:
+  Variance: +60.4%
+  Gaussian: +60.1%
+  MSD: +26.5%
+
+MSD Exponent: alpha = 0.780 +/- 0.037 (Sub-diffusive)
+MSD fit: forced through origin (MSD = 4*D*tau)
+Sigma-clipping: applied before MSD (consistent with variance method)
+
+Output: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Analysis\figures\2026-03-05\r7-3mu-0_5p-3ul-water-397ul-gly-100ul-trial1-tracker
+======================================================================
