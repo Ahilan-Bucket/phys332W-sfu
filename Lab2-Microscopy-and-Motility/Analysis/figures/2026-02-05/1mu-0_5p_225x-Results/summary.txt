@@ -1,5 +1,5 @@
 ======================================================================
-ANALYSIS SUMMARY (Pipeline v1.2)
+ANALYSIS SUMMARY (Pipeline v1.3)
 ======================================================================
 
 Input file: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Data\2026-02-05\1mu-0_5p_225x-Results.txt
@@ -15,10 +15,13 @@ dt: 34.48 ms
 
 Data: 240 frames, 39 particles, 9 segments, 111 steps
 
-Diffusion Coefficients (um^2/s):
-  Direct Variance: 0.2821 +/- 0.0184
-  Gaussian Fit:    0.3321 +/- 0.0184
-  MSD Slope:       0.1431 +/- 0.0066
+Diffusion Coefficients (um^2/s) — noise-corrected:
+  Direct Variance: 0.2641 +/- 0.0184
+  Gaussian Fit:    0.3141 +/- 0.0184
+  MSD Slope:       0.1251 +/- 0.0066
+  D_noise:         0.0180 (subtracted from all methods)
+  Raw (before noise subtraction):
+    Variance: 0.2821  Gauss: 0.3321  MSD: 0.1431
 
 Theory (Stokes-Einstein + dual-wall Faxen):
   D_0 (uncorrected):  0.4395 um^2/s
@@ -28,9 +31,9 @@ Theory (Stokes-Einstein + dual-wall Faxen):
   D_wall:             0.4258 um^2/s
 
 Deviations from D_mid:
-  Variance: -34.9%
-  Gaussian: -23.4%
-  MSD: -67.0%
+  Variance: -39.1%
+  Gaussian: -27.5%
+  MSD: -71.2%
 
 MSD Exponent: alpha = 21.060 +/- 100324.261 (Super-diffusive)
 MSD fit: forced through origin (MSD = 4*D*tau)

@@ -1,6 +1,6 @@
 # === TRACKER DATA METADATA (readme.txt) ===
-# Updated: 2026-03-08T12:20:26.152624
-# Pipeline: v1.2
+# Updated: 2026-03-08T17:35:20.873107
+# Pipeline: v1.3
 
 [constants]
 filename = r7-3mu-0_5p-3ul-water-397ul-gly-100ul-trial2-tracker.txt
@@ -16,12 +16,12 @@ temp_c = 21.0
 pixel_size_um = 0.0684
 
 [volatile]
-pipeline_version = 1.2
-d_variance = 0.089245
+pipeline_version = 1.3
+d_variance = 0.071210
 d_variance_err = 0.002727
-d_gauss = 0.089998
+d_gauss = 0.071962
 d_gauss_err = 0.002727
-d_msd = 0.088368
+d_msd = 0.070332
 d_msd_err = 0.001596
 d_mid = 0.081013
 d_wall = 0.076615
@@ -29,5 +29,5 @@ eta_corrected = 0.00170097
 alpha = 1.0009
 alpha_err = 0.0230
 n_segments = 4
-last_processed = 2026-03-08T12:20:26.151613
+last_processed = 2026-03-08T17:35:20.873107
 

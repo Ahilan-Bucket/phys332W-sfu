@@ -1,5 +1,5 @@
 ======================================================================
-ANALYSIS SUMMARY (Pipeline v1.2)
+ANALYSIS SUMMARY (Pipeline v1.3)
 ======================================================================
 
 Input file: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Data\2026-03-05\r16-5mu-0_5p-20ul-acetone-490-trial2-tracker.txt
@@ -15,10 +15,13 @@ dt: 34.48 ms
 
 Data: 240 frames, 2 particles, 2 segments, 478 steps
 
-Diffusion Coefficients (um^2/s):
-  Direct Variance: 0.0842 +/- 0.0036
-  Gaussian Fit:    0.0895 +/- 0.0036
-  MSD Slope:       0.0803 +/- 0.0018
+Diffusion Coefficients (um^2/s) — noise-corrected:
+  Direct Variance: 0.0662 +/- 0.0036
+  Gaussian Fit:    0.0715 +/- 0.0036
+  MSD Slope:       0.0623 +/- 0.0018
+  D_noise:         0.0180 (subtracted from all methods)
+  Raw (before noise subtraction):
+    Variance: 0.0842  Gauss: 0.0895  MSD: 0.0803
 
 Theory (Stokes-Einstein + dual-wall Faxen):
   D_0 (uncorrected):  0.2693 um^2/s
@@ -28,9 +31,9 @@ Theory (Stokes-Einstein + dual-wall Faxen):
   D_wall:             0.2280 um^2/s
 
 Deviations from D_mid:
-  Variance: -66.4%
-  Gaussian: -64.3%
-  MSD: -68.0%
+  Variance: -73.6%
+  Gaussian: -71.5%
+  MSD: -75.2%
 
 MSD Exponent: alpha = 0.892 +/- 0.021 (Sub-diffusive)
 MSD fit: forced through origin (MSD = 4*D*tau)

@@ -1,6 +1,6 @@
 # === TRACKER DATA METADATA (readme.txt) ===
-# Updated: 2026-03-08T12:16:16.922284
-# Pipeline: v1.2
+# Updated: 2026-03-08T16:55:31.588895
+# Pipeline: v1.3
 
 [constants]
 filename = 1um-post-lab-trackresults.txt
@@ -16,12 +16,12 @@ temp_c = 21.0
 pixel_size_um = 0.0684
 
 [volatile]
-pipeline_version = 1.2
-d_variance = 0.021837
+pipeline_version = 1.3
+d_variance = 0.003802
 d_variance_err = 0.004296
-d_gauss = 0.030430
+d_gauss = 0.012394
 d_gauss_err = 0.004296
-d_msd = 0.084213
+d_msd = 0.066177
 d_msd_err = 0.000000
 d_mid = 0.433510
 d_wall = 0.425813
@@ -29,5 +29,5 @@ eta_corrected = 0.00098069
 alpha = -0.2811
 alpha_err = 0.3157
 n_segments = 1
-last_processed = 2026-03-08T12:16:16.922284
+last_processed = 2026-03-08T16:55:31.588895
 

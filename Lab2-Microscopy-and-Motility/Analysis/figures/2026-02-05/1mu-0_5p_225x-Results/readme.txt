@@ -1,6 +1,6 @@
 # === TRACKER DATA METADATA (readme.txt) ===
-# Updated: 2026-03-08T12:16:26.168519
-# Pipeline: v1.2
+# Updated: 2026-03-08T16:55:39.600649
+# Pipeline: v1.3
 
 [constants]
 filename = 1mu-0_5p_225x-Results.txt
@@ -16,12 +16,12 @@ temp_c = 21.0
 pixel_size_um = 0.0684
 
 [volatile]
-pipeline_version = 1.2
-d_variance = 0.282094
+pipeline_version = 1.3
+d_variance = 0.264058
 d_variance_err = 0.018438
-d_gauss = 0.332114
+d_gauss = 0.314079
 d_gauss_err = 0.018438
-d_msd = 0.143090
+d_msd = 0.125054
 d_msd_err = 0.006649
 d_mid = 0.433510
 d_wall = 0.425813
@@ -29,5 +29,5 @@ eta_corrected = 0.00098069
 alpha = 21.0595
 alpha_err = 100324.2611
 n_segments = 9
-last_processed = 2026-03-08T12:16:26.167519
+last_processed = 2026-03-08T16:55:39.600649
 

@@ -1,5 +1,5 @@
 ======================================================================
-ANALYSIS SUMMARY (Pipeline v1.2)
+ANALYSIS SUMMARY (Pipeline v1.3)
 ======================================================================
 
 Input file: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Data\2026-03-05\r10-2_1mu-0_5p-4ul-water-298ul-gly-200ul-trial1-tracker.txt
@@ -15,10 +15,13 @@ dt: 34.48 ms
 
 Data: 240 frames, 4 particles, 4 segments, 906 steps
 
-Diffusion Coefficients (um^2/s):
-  Direct Variance: 0.0294 +/- 0.0062
-  Gaussian Fit:    0.0265 +/- 0.0062
-  MSD Slope:       0.0308 +/- 0.0014
+Diffusion Coefficients (um^2/s) — noise-corrected:
+  Direct Variance: 0.0114 +/- 0.0062
+  Gaussian Fit:    0.0085 +/- 0.0062
+  MSD Slope:       0.0128 +/- 0.0014
+  D_noise:         0.0180 (subtracted from all methods)
+  Raw (before noise subtraction):
+    Variance: 0.0294  Gauss: 0.0265  MSD: 0.0308
 
 Theory (Stokes-Einstein + dual-wall Faxen):
   D_0 (uncorrected):  0.0572 um^2/s
@@ -28,9 +31,9 @@ Theory (Stokes-Einstein + dual-wall Faxen):
   D_wall:             0.0534 um^2/s
 
 Deviations from D_mid:
-  Variance: -47.1%
-  Gaussian: -52.2%
-  MSD: -44.5%
+  Variance: -79.6%
+  Gaussian: -84.7%
+  MSD: -77.0%
 
 MSD Exponent: alpha = 0.870 +/- 0.035 (Sub-diffusive)
 MSD fit: forced through origin (MSD = 4*D*tau)

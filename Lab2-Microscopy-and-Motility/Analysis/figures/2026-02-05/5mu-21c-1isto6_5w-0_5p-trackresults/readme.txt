@@ -1,6 +1,6 @@
 # === TRACKER DATA METADATA (readme.txt) ===
-# Updated: 2026-03-08T12:16:49.679229
-# Pipeline: v1.2
+# Updated: 2026-03-08T16:55:58.723770
+# Pipeline: v1.3
 
 [constants]
 filename = 5mu-21c-1isto6_5w-0_5p-trackresults.txt
@@ -16,12 +16,12 @@ temp_c = 21.0
 pixel_size_um = 0.0684
 
 [volatile]
-pipeline_version = 1.2
-d_variance = 0.013650
+pipeline_version = 1.3
+d_variance = 0.000000
 d_variance_err = 0.001006
-d_gauss = 0.011708
+d_gauss = 0.000000
 d_gauss_err = 0.001006
-d_msd = 0.016966
+d_msd = 0.000000
 d_msd_err = 0.000356
 d_mid = 0.081927
 d_wall = 0.074435
@@ -29,5 +29,5 @@ eta_corrected = 0.00098069
 alpha = 1.0264
 alpha_err = 0.0151
 n_segments = 21
-last_processed = 2026-03-08T12:16:49.679229
+last_processed = 2026-03-08T16:55:58.722771
 
