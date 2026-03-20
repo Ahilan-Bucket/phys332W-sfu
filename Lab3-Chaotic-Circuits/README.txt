@@ -154,3 +154,4 @@ Hardware:
   - Anatek regulated DC power supply
   - USB cable (oscilloscope to laptop data transfer)
 
+Used: Hyey, btw I used Claude AI to help me make this .readme :)
