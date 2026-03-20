@@ -1,9 +1,6 @@
-# === VIDEO METADATA (readme.txt) ===
-# Last updated: 2026-03-05T13:40:11.349084
-#
-# [constants] — write-once (video properties from file + JOBS tuple)
-# [detection] — AUTO = use preset; MANUAL = interactive tuning overrides
-# [volatile]  — overwritten every pipeline run
+# === TRACKER DATA METADATA (readme.txt) ===
+# Updated: 2026-03-08T20:28:23.139747
+# Pipeline: v1.3
 
 [constants]
 filename = r12-5mu-0_5p-20ul-water-290ul-gly-200ul-trial2-new-contrast-from-new-focus.avi
@@ -28,14 +25,18 @@ area_mult_min = 0.1
 area_mult_max = 5.0
 
 [volatile]
-pipeline_version = 2.3
-d_variance = 0.030770
-d_gauss = 0.000212
-d_msd = 0.009537
-alpha = 0.3425
-n_tracks = 1
-n_segs = 1
-last_processed = 2026-03-05T13:40:11.348073
-max_displacement_px = 15
-max_gap_frames = 6
+pipeline_version = 1.3
+d_variance = 0.043239
+d_variance_err = 0.030426
+d_gauss = 0.000000
+d_gauss_err = 0.030426
+d_msd = 0.000000
+d_msd_err = 0.000805
+d_mid = 0.021728
+d_wall = 0.019741
+eta_corrected = 0.00369771
+alpha = 0.1425
+alpha_err = 0.1546
+n_segments = 1
+last_processed = 2026-03-08T20:28:23.138745
 

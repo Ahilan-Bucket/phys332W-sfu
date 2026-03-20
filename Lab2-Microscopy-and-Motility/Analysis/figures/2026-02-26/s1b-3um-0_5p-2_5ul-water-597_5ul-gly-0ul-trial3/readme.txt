@@ -1,9 +1,6 @@
-# === VIDEO METADATA (readme.txt) ===
-# Last updated: 2026-03-05T13:14:21.722473
-#
-# [constants] — write-once (video properties from file + JOBS tuple)
-# [detection] — AUTO = use preset; MANUAL = interactive tuning overrides
-# [volatile]  — overwritten every pipeline run
+# === TRACKER DATA METADATA (readme.txt) ===
+# Updated: 2026-03-08T20:19:31.600648
+# Pipeline: v1.3
 
 [constants]
 filename = s1b-3um-0_5p-2_5ul-water-597_5ul-gly-0ul-trial3.avi
@@ -28,14 +25,18 @@ area_mult_min = 0.1
 area_mult_max = 6.0
 
 [volatile]
-pipeline_version = 2.3
-d_variance = 0.053465
-d_gauss = 0.038852
-d_msd = 0.042236
-alpha = 0.2393
-n_tracks = 10
-n_segs = 10
-last_processed = 2026-03-05T13:14:21.722473
-max_displacement_px = 15
-max_gap_frames = 4
+pipeline_version = 1.3
+d_variance = 0.088249
+d_variance_err = 0.107753
+d_gauss = 0.062921
+d_gauss_err = 0.107753
+d_msd = 0.042105
+d_msd_err = 0.002760
+d_mid = 0.140508
+d_wall = 0.132880
+eta_corrected = 0.00098074
+alpha = 0.4700
+alpha_err = 0.0223
+n_segments = 10
+last_processed = 2026-03-08T20:19:31.599634
 

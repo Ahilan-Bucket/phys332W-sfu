@@ -1,9 +1,6 @@
-# === VIDEO METADATA (readme.txt) ===
-# Last updated: 2026-03-05T13:44:36.092164
-#
-# [constants] — write-once (video properties from file + JOBS tuple)
-# [detection] — AUTO = use preset; MANUAL = interactive tuning overrides
-# [volatile]  — overwritten every pipeline run
+# === TRACKER DATA METADATA (readme.txt) ===
+# Updated: 2026-03-08T20:29:20.929858
+# Pipeline: v1.3
 
 [constants]
 filename = r15-3mu-0_5p-6ul-acetone-497ul-trial1.avi
@@ -28,14 +25,18 @@ area_mult_min = 0.1
 area_mult_max = 6.0
 
 [volatile]
-pipeline_version = 2.3
-d_variance = 0.182919
-d_gauss = 0.147943
-d_msd = 0.185792
-alpha = 0.7992
-n_tracks = 12
-n_segs = 11
-last_processed = 2026-03-05T13:44:36.091163
-max_displacement_px = 15
-max_gap_frames = 4
+pipeline_version = 1.3
+d_variance = 0.227051
+d_variance_err = 0.019874
+d_gauss = 0.221688
+d_gauss_err = 0.019874
+d_msd = 0.174720
+d_msd_err = 0.004207
+d_mid = 0.430566
+d_wall = 0.407191
+eta_corrected = 0.00032005
+alpha = 0.7224
+alpha_err = 0.0137
+n_segments = 12
+last_processed = 2026-03-08T20:29:20.928841
 

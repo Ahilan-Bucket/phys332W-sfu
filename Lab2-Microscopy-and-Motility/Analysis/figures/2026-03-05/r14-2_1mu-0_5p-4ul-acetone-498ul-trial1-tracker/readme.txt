@@ -1,6 +1,9 @@
 # === TRACKER DATA METADATA (readme.txt) ===
-# Updated: 2026-03-08T17:34:35.266152
-# Pipeline: v1.3
+# Last updated: 2026-03-05T17:16:05.699703
+# Pipeline: Tracker Pipeline v1.1
+#
+# [constants] — write-once (data file properties + parsed params)
+# [volatile]  — overwritten every pipeline run
 
 [constants]
 filename = r14-2_1mu-0_5p-4ul-acetone-498ul-trial1-tracker.txt
@@ -16,18 +19,15 @@ temp_c = 21.0
 pixel_size_um = 0.0684
 
 [volatile]
-pipeline_version = 1.3
-d_variance = 0.285521
+pipeline_version = 1.1
+d_variance = 0.303556
 d_variance_err = 0.014841
-d_gauss = 0.281852
+d_gauss = 0.299888
 d_gauss_err = 0.014841
-d_msd = 0.286791
-d_msd_err = 0.005303
-d_mid = 0.622974
-d_wall = 0.599477
-eta_corrected = 0.00032003
-alpha = 0.9644
-alpha_err = 0.0243
+d_msd = 0.306081
+d_msd_err = 0.010212
+alpha = 0.9420
+alpha_err = 0.0117
 n_segments = 5
-last_processed = 2026-03-08T17:34:35.266152
+last_processed = 2026-03-05T17:16:05.699703
 

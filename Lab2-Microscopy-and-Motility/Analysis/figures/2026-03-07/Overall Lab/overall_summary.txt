@@ -1,0 +1,128 @@
+==================================================================================================================================
+OVERALL LAB DATA SUMMARY
+Brownian Motion Diffusion Coefficient Measurements
+PHYS 382 Advanced Lab II — Lab 2: Microscopy and Motility
+==================================================================================================================================
+
+Total trials analysed: 50
+  R-series (Sessions 7-8, March 3): 31 trials
+  S-series (Sessions 5-6, Feb 26):  19 trials
+
+CONDITIONS MATRIX:
+--------------------------------------------------------------------------------
+  Bead       Water     20% Gly     20% Ace     36% Gly     40% Gly     40% Ace    100% Ace     41% Gly
+  1.0um           1           7          --          --          --          --          --          --
+  2.1um           1           2          --          --           2          --           2          --
+  3.0um           6           8           2           3           2           1           1          --
+  5.0um           2           3          --          --          --          --           3           4
+
+
+Nathan's Faxen Correction Factors:
+  Bead      F_min (midplane)   F_max (touching wall)
+   1.0 um      0.986              0.561
+   2.1 um      0.971              0.560
+   3.0 um      0.959              0.559
+   5.0 um      0.932              0.557
+
+
+MISSING from Nathan's 4x4 matrix:
+  R13: 1.0 um, Acetone -- NO DATA COLLECTED
+  R9: 1.0 um, 40% Gly -- NO DATA COLLECTED
+
+
+============================================================================================================================================
+DETAILED PER-TRIAL DATA
+============================================================================================================================================
+  # ID     Ser Tr  Bead Solvent       eta   D_var    +-   D_gau   D_msd      D0   D_max   D_min  Ratio  alpha Class           Dir                                     
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  1 R1       R  1   1.0 Water       0.981  0.4065 0.0087  0.4040  0.3818  0.4395  0.4333  0.2466   0.94  0.814 Sub-diffusive   r1-1mu-0_5p-1_15ul-water-500ul-gly-0-tracker
+  2 R5       R  1   1.0 20% Gly     1.694  0.2688 0.0075  0.2644  0.2430  0.2544  0.2508  0.1427   1.07  1.140 Super-diffusive r5-1mu-0_5p-1_15ul-water-400ul-gly-100ul-trial1-tracker
+  3 R5       R  2   1.0 20% Gly     1.694  0.2545 0.0070  0.2537  0.2319  0.2544  0.2508  0.1427   1.01  1.021 Normal diffusion r5-1mu-0_5p-1_15ul-water-400ul-gly-100ul-trial2-tracker
+  4 R2       R  1   2.1 Water       0.981  0.0706 0.0250  0.0632  0.0727  0.2093  0.2032  0.1172   0.35  1.234 Super-diffusive r2-2_1mu-0_5p-4ul-water-498ul-gly-0l-trial1-tracker
+  5 R6       R  1   2.1 20% Gly     1.699  0.1357 0.0059  0.1318  0.1299  0.1208  0.1173  0.0676   1.16  0.694 Sub-diffusive   r6-2_1mu-0_5p-4ul-water-398ul-gly-100l-trial1-tracker
+  6 R6       R  2   2.1 20% Gly     1.699  0.1101 0.0126  0.1105  0.1145  0.1208  0.1173  0.0676   0.94  0.882 Sub-diffusive   r6-2_1mu-0_5p-4ul-water-398ul-gly-100l-trial2-tracker
+  7 R10      R  1   2.1 40% Gly     3.590  0.0114 0.0062  0.0085  0.0128  0.0572  0.0555  0.0320   0.21  0.870 Sub-diffusive   r10-2_1mu-0_5p-4ul-water-298ul-gly-200ul-trial1-tracker
+  8 R10      R  2   2.1 40% Gly     3.590  0.0348 0.0042  0.0324  0.0326  0.0572  0.0555  0.0320   0.63  0.940 Normal diffusion r10-2_1mu-0_5p-4ul-water-298ul-gly-200ul-trial2-tracker
+  9 R14      R  1   2.1 100% Ace    0.320  0.0000 0.0000  0.0000  0.0000  0.6414  0.6228  0.3592   0.00  0.942 ?               r14-2_1mu-0_5p-4ul-acetone-498ul-trial1-tracker
+ 10 R14      R  2   2.1 100% Ace    0.320  0.3466 0.0060  0.3419  0.3619  0.6413  0.6227  0.3591   0.56  1.032 Normal diffusion r14-2_1mu-0_5p-4ul-acetone-498ul-trial2-tracker
+ 11 R3       R  1   3.0 Water       0.981  0.0676 0.0174  0.0594  0.0668  0.1465  0.1405  0.0819   0.48  0.673 Sub-diffusive   r3-3mu-0_5p-4ul-water-497ul-gly-0-trial1-tracker
+ 12 R3       R  2   3.0 Water       0.981  0.1239 0.0028  0.1184  0.0795  0.1465  0.1405  0.0819   0.88  0.689 Sub-diffusive   r3-3mu-0_5p-4ul-water-497ul-gly-0-trial2-track
+ 13 R3       R  2   3.0 Water       0.981  0.1059 0.0028  0.1003  0.0615  0.1465  0.1405  0.0819   0.75  0.689 Sub-diffusive   r3-3mu-0_5p-4ul-water-497ul-gly-0-trial2-tracker
+ 14 R7       R  1   3.0 20% Gly     1.701  0.1119 0.0060  0.1116  0.0844  0.0845  0.0810  0.0472   1.38  0.780 Sub-diffusive   r7-3mu-0_5p-3ul-water-397ul-gly-100ul-trial1-tracker
+ 15 R7       R  2   3.0 20% Gly     1.701  0.0712 0.0027  0.0720  0.0703  0.0845  0.0810  0.0472   0.88  1.001 Normal diffusion r7-3mu-0_5p-3ul-water-397ul-gly-100ul-trial2-tracker
+ 16 R7       R  3   3.0 20% Gly     1.701  0.0769 0.0085  0.0747  0.0773  0.0845  0.0810  0.0472   0.95  1.183 Super-diffusive r7-3mu-0_5p-3ul-water-397ul-gly-100ul-trial3-tracker
+ 17 R11      R  1   3.0 40% Gly     3.603  0.0077 0.0033  0.0039  0.0044  0.0399  0.0383  0.0223   0.20  0.801 Sub-diffusive   r11-3mu-0_5p-6ul-water-297ul-gly-200ul-trial1-tracker
+ 18 R11      R  2   3.0 40% Gly     3.603  0.0035 0.0015  0.0029  0.0000  0.0399  0.0383  0.0223   0.09  0.995 Normal diffusion r11-3mu-0_5p-6ul-water-297ul-gly-200ul-trial2-tracker
+ 19 R15      R  1   3.0 100% Ace    0.320  0.1964 0.0114  0.1997  0.1997  0.4489  0.4305  0.2509   0.46  0.810 Sub-diffusive   r15-3mu-0_5p-6ul-acetone-497ul-trial1-tracker
+ 20 R4       R  1   5.0 Water       0.981  0.0000 0.0000  0.0000  0.0000  0.0879  0.0819  0.0490   0.00  0.868 ?               r4-5mu-0_5p-10ul-water-490ul-gly-0-trial1-tracker
+ 21 R4       R  2   5.0 Water       0.981  0.0172 0.0009  0.0188  0.0067  0.0879  0.0819  0.0490   0.21  0.666 Sub-diffusive   r4-5mu-0_5p-10ul-water-490ul-gly-0-trial2-tracker
+ 22 R8       R  1   5.0 20% Gly     1.716  0.0301 0.0030  0.0329  0.0248  0.0502  0.0468  0.0280   0.64  0.792 Sub-diffusive   r8-5mu-0_5p-20ul-water-390ul-gly-100ul-trial1-tracker
+ 23 R8       R  2   5.0 20% Gly     1.716  0.0000 0.0079  0.0000  0.0000  0.0502  0.0468  0.0280   0.00  1.200 Super-diffusive r8-5mu-0_5p-20ul-water-390ul-gly-100ul-trial2-tracker
+ 24 R8       R  3   5.0 20% Gly     1.716  0.0283 0.0013  0.0300  0.0362  0.0502  0.0468  0.0280   0.60  1.439 Super-diffusive r8-5mu-0_5p-20ul-water-390ul-gly-100ul-trial3-tracker
+ 25 R16      R  1   5.0 100% Ace    0.320  0.0541 0.0011  0.0545  0.0689  0.2693  0.2510  0.1500   0.22  1.075 Normal diffusion r16-5mu-0_5p-20ul-acetone-490-trial1-tracker
+ 26 R16      R  2   5.0 100% Ace    0.320  0.0662 0.0036  0.0715  0.0623  0.2693  0.2510  0.1500   0.26  0.892 Sub-diffusive   r16-5mu-0_5p-20ul-acetone-490-trial2-tracker
+ 27 R16      R  4   5.0 100% Ace    0.320  0.0703 0.0035  0.0710  0.0596  0.2693  0.2510  0.1500   0.28  0.604 Sub-diffusive   r16-5mu-0_5p-20ul-acetone-490-trial4-tracker
+ 28 R12      R  2   5.0 41% Gly     3.696  0.0000 0.0030  0.0000  0.0000  0.0233  0.0217  0.0130   0.00  1.104 Super-diffusive r12-5mu-0_5p-10ul-water-290ul-gly-200ul-trial2-tracker
+ 29 R12      R  2   5.0 41% Gly     3.696  0.0000 0.0030  0.0000  0.0000  0.0233  0.0217  0.0130   0.00  1.104 Super-diffusive r12-5mu-0_5p-20ul-water-290ul-gly-200ul-trial2-tracker
+ 30 R12      R  3   5.0 41% Gly     3.696  0.0000 0.0007  0.0000  0.0000  0.0233  0.0217  0.0130   0.00  1.110 Super-diffusive r12-5mu-0_5p-10ul-water-290ul-gly-200ul-trial3-tracker
+ 31 R12      R  3   5.0 41% Gly     3.696  0.0016 0.0006  0.0004  0.0000  0.0233  0.0217  0.0130   0.07  0.944 Normal diffusion r12-5mu-0_5p-20ul-water-290ul-gly-200ul-trial3-tracker
+ 32 S2     S-slide  1   1.0 20% Gly     1.699  0.1893 0.0110  0.1882  0.2124  0.2537  0.2501  0.1423   0.76  0.698 Sub-diffusive   s2c-1um-0_5p-11_5ul-water-3978_5ul-gly-1000ul-trial1-tracker
+ 33 S2     S-slide  2   1.0 20% Gly     1.695  0.2480 0.0046  0.2571  0.2612  0.2543  0.2507  0.1427   0.99  1.157 Super-diffusive s2a-1um-0_5p-2_3ul-water-3997ul-gly-1000ul-trial2-tracker
+ 34 S2     S-slide  2   1.0 20% Gly     1.699  0.1696 0.0107  0.1623  0.1635  0.2537  0.2501  0.1423   0.68  0.892 Sub-diffusive   s2c-1um-0_5p-11_5ul-water-3978_5ul-gly-1000ul-trial2-tracker
+ 35 S2     S-slide  3   1.0 20% Gly     1.695  0.3170 0.0052  0.3066  0.3607  0.2543  0.2507  0.1427   1.26  0.848 Sub-diffusive   s2a-1um-0_5p-2_3ul-water-3997ul-gly-1000ul-trial3-tracker
+ 36 S2     S-slide  3   1.0 20% Gly     1.699  0.0000 0.0000  0.0000  0.0000  0.2537  0.2501  0.1423   0.00  1.063 ?               s2c-1um-0_5p-11_5ul-water-3978_5ul-gly-1000ul-trial3-tracker
+ 37 S1     S-slide  3   3.0 Water       0.981  0.0590 0.0033  0.0613  0.0720  0.1465  0.1405  0.0819   0.42  0.490 Sub-diffusive   s1b-3um-0_5p-2_5ul-water-597_5ul-gly-0ul-trial3-tracker
+ 38 S1     S-slide  4   3.0 Water       0.981  0.0597 0.0051  0.0577  0.0682  0.1465  0.1405  0.0819   0.42  0.909 Normal diffusion s1b-3um-0_5p-2_5ul-water-597_5ul-gly-0ul-trial4-tracker
+ 39 S1     S-slide  5   3.0 Water       0.981  0.0000 0.0000  0.0000  0.0000  0.1465  0.1405  0.0819   0.00  0.222 ?               s1b-3um-0_5p-2_5ul-water-597_5ul-gly-0ul-trial5-tracker
+ 40 S2     S-slide  1   3.0 20% Gly     1.695  0.0934 0.0214  0.0971  0.0711  0.0848  0.0813  0.0474   1.15  1.299 Super-diffusive s2b-3um-0_5p-2_3ul-water-3997ul-gly-1000ul-trial1-tracker
+ 41 S3     S-slide  1   3.0 20% Gly     1.703  0.0000 0.0004  0.0000  0.0000  0.0844  0.0809  0.0472   0.00  1.143 Super-diffusive s3-3um-0_5p-3ul-water-396ul-gly-100ul-trial1-tracker
+ 42 S2     S-slide  2   3.0 20% Gly     1.695  0.0810 0.0032  0.0747  0.0861  0.0848  0.0813  0.0474   1.00  1.302 Super-diffusive s2b-3um-0_5p-2_3ul-water-3997ul-gly-1000ul-trial2-tracker
+ 43 S3     S-slide  2   3.0 20% Gly     1.703  0.0000 0.0004  0.0000  0.0000  0.0844  0.0809  0.0472   0.00  0.921 Normal diffusion s3-3um-0_5p-3ul-water-396ul-gly-100ul-trial2-tracker
+ 44 S2     S-slide  3   3.0 20% Gly     1.695  0.0319 0.0027  0.0266  0.0273  0.0848  0.0813  0.0474   0.39  1.439 Super-diffusive s2b-3um-0_5p-2_3ul-water-3997ul-gly-1000ul-trial3-tracker
+ 45 S8     S-slide  1   3.0 20% Ace     0.819  0.0078 0.0043  0.0044  0.0000  0.1755  0.1683  0.0981   0.05  0.348 Sub-diffusive   s8-3um-0_5p-3ul-water-397ul-ace-100ul-trial1-tracker
+ 46 S8     S-slide  2   3.0 20% Ace     0.819  0.0042 0.0011  0.0054  0.0000  0.1755  0.1683  0.0981   0.02  0.416 Sub-diffusive   s8-3um-0_5p-3ul-water-397ul-ace-100ul-trial2-tracker
+ 47 S7     S-slide  1   3.0 36% Gly     3.043  0.0000 0.0030  0.0000  0.0034  0.0472  0.0453  0.0264   0.00  1.246 Super-diffusive s7-3um-0_5p-3_8ul-water-316_2ul-gly-180ul-trial1-tracker
+ 48 S7     S-slide  2   3.0 36% Gly     3.043  0.0090 0.0031  0.0087  0.0033  0.0472  0.0453  0.0264   0.20  0.971 Normal diffusion s7-3um-0_5p-3_8ul-water-316_2ul-gly-180ul-trial2-tracker
+ 49 S7     S-slide  3   3.0 36% Gly     3.043  0.0039 0.0037  0.0003  0.0000  0.0472  0.0453  0.0264   0.09  1.037 Normal diffusion s7-3um-0_5p-3_8ul-water-316_2ul-gly-180ul-trial3-tracker
+ 50 S9     S-slide  1   3.0 40% Ace     0.620  0.0100 0.0055  0.0092  0.0153  0.2317  0.2222  0.1295   0.05  0.969 Normal diffusion s9-3um-0_5p-24_0ul-water-1200ul-ace-800ul-trial1-tracker
+
+
+==================================================================================================================================
+AGGREGATED BY CONDITION (mean +/- std)
+==================================================================================================================================
+ Bead Solvent     Ser  N   D_var    +-   D_gau   D_msd      D0   D_max   D_min  Ratio  alpha InRng
+--------------------------------------------------------------------------------------------------------------
+  1.0 20% Gly       R  2  0.2616 0.0101  0.2591  0.2374  0.2544  0.2508  0.1427   1.04  1.080    no
+  1.0 Water         R  1  0.4065 0.0000  0.4040  0.3818  0.4395  0.4333  0.2466   0.94  0.814   YES
+  2.1 100% Ace      R  2  0.1733 0.2451  0.1709  0.3619  0.6414  0.6228  0.3592   0.28  0.987    no
+  2.1 20% Gly       R  2  0.1229 0.0181  0.1212  0.1222  0.1208  0.1173  0.0676   1.05  0.788    no
+  2.1 40% Gly       R  2  0.0231 0.0165  0.0204  0.0227  0.0572  0.0555  0.0320   0.42  0.905    no
+  2.1 Water         R  1  0.0706 0.0000  0.0632  0.0727  0.2093  0.2032  0.1172   0.35  1.234    no
+  3.0 100% Ace      R  1  0.1964 0.0000  0.1997  0.1997  0.4489  0.4305  0.2509   0.46  0.810    no
+  3.0 20% Gly       R  3  0.0867 0.0220  0.0861  0.0773  0.0845  0.0810  0.0472   1.07  0.988    no
+  3.0 40% Gly       R  2  0.0056 0.0030  0.0034  0.0022  0.0399  0.0383  0.0223   0.15  0.898    no
+  3.0 Water         R  3  0.0991 0.0288  0.0927  0.0693  0.1465  0.1405  0.0819   0.71  0.684   YES
+  5.0 100% Ace      R  3  0.0635 0.0084  0.0657  0.0636  0.2693  0.2510  0.1500   0.25  0.857    no
+  5.0 20% Gly       R  3  0.0195 0.0169  0.0210  0.0203  0.0502  0.0468  0.0280   0.42  1.144    no
+  5.0 41% Gly       R  4  0.0004 0.0008  0.0001  0.0000  0.0233  0.0217  0.0130   0.02  1.066    no
+  5.0 Water         R  2  0.0086 0.0122  0.0094  0.0067  0.0879  0.0819  0.0490   0.10  0.767    no
+  1.0 20% Gly    S-slide  5  0.1848 0.1182  0.1828  0.2495  0.2543  0.2507  0.1427   0.74  0.932   YES
+  3.0 20% Ace    S-slide  2  0.0060 0.0025  0.0049  0.0000  0.1755  0.1683  0.0981   0.04  0.382    no
+  3.0 20% Gly    S-slide  5  0.0413 0.0441  0.0397  0.0369  0.0848  0.0813  0.0474   0.51  1.221    no
+  3.0 36% Gly    S-slide  3  0.0043 0.0045  0.0030  0.0022  0.0472  0.0453  0.0264   0.09  1.085    no
+  3.0 40% Ace    S-slide  1  0.0100 0.0000  0.0092  0.0153  0.2317  0.2222  0.1295   0.05  0.969    no
+  3.0 Water      S-slide  3  0.0396 0.0343  0.0397  0.0701  0.1465  0.1405  0.0819   0.28  0.540    no
+
+==================================================================================================================================
+LEGEND:
+  D_var = Direct Variance method (noise-corrected)
+  D_gau = Gaussian Fit method (noise-corrected)
+  D_msd = MSD Slope method (noise-corrected)
+  D0    = Stokes-Einstein (no wall correction)
+  D_max = D0 * F_min (midplane, best case Faxen)
+  D_min = D0 * F_max (touching wall, worst case Faxen)
+  Ratio = D_var / D_max (1.0 = perfect match to midplane theory)
+  alpha = MSD exponent (1.0 = normal Brownian diffusion)
+  InRng = D_min <= D_var <= D_max?
+  All D values in um^2/s. Noise floor: D_noise = 0.0180 um^2/s
+==================================================================================================================================

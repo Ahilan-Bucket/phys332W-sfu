@@ -1,9 +1,6 @@
-# === VIDEO METADATA (readme.txt) ===
-# Last updated: 2026-03-05T13:11:26.241100
-#
-# [constants] — write-once (video properties from file + JOBS tuple)
-# [detection] — AUTO = use preset; MANUAL = interactive tuning overrides
-# [volatile]  — overwritten every pipeline run
+# === TRACKER DATA METADATA (readme.txt) ===
+# Updated: 2026-03-08T20:18:45.034261
+# Pipeline: v1.3
 
 [constants]
 filename = 3um-0_5p-4_9pstock-0pgly-trial1.avi
@@ -28,14 +25,18 @@ area_mult_min = 0.1
 area_mult_max = 6.0
 
 [volatile]
-pipeline_version = 2.3
-d_variance = 0.037922
-d_gauss = 0.000589
-d_msd = 0.130618
-alpha = 0.9075
-n_tracks = 18
-n_segs = 19
-last_processed = 2026-03-05T13:11:26.240099
-max_displacement_px = 15
-max_gap_frames = 4
+pipeline_version = 1.3
+d_variance = 0.055106
+d_variance_err = 0.036222
+d_gauss = 0.000000
+d_gauss_err = 0.036222
+d_msd = 0.095008
+d_msd_err = 0.005460
+d_mid = 0.140515
+d_wall = 0.132886
+eta_corrected = 0.00098069
+alpha = 1.2561
+alpha_err = 0.0232
+n_segments = 18
+last_processed = 2026-03-08T20:18:45.033263
 

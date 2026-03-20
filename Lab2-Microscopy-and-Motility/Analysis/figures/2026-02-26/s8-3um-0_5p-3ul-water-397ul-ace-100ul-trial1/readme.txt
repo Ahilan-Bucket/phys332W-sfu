@@ -1,9 +1,6 @@
-# === VIDEO METADATA (readme.txt) ===
-# Last updated: 2026-03-05T13:22:49.218042
-#
-# [constants] — write-once (video properties from file + JOBS tuple)
-# [detection] — AUTO = use preset; MANUAL = interactive tuning overrides
-# [volatile]  — overwritten every pipeline run
+# === TRACKER DATA METADATA (readme.txt) ===
+# Updated: 2026-03-08T20:23:36.832541
+# Pipeline: v1.3
 
 [constants]
 filename = s8-3um-0_5p-3ul-water-397ul-ace-100ul-trial1.avi
@@ -28,14 +25,18 @@ area_mult_min = 0.1
 area_mult_max = 6.0
 
 [volatile]
-pipeline_version = 2.3
-d_variance = 0.566307
-d_gauss = 0.539004
-d_msd = 0.326054
-alpha = 0.9459
-n_tracks = 1
-n_segs = 1
-last_processed = 2026-03-05T13:22:49.218042
-max_displacement_px = 15
-max_gap_frames = 4
+pipeline_version = 1.3
+d_variance = 0.591648
+d_variance_err = 0.086873
+d_gauss = 0.765394
+d_gauss_err = 0.086873
+d_msd = 0.194320
+d_msd_err = 0.000000
+d_mid = 0.168285
+d_wall = 0.159149
+eta_corrected = 0.00081885
+alpha = 1.0000
+alpha_err = 0.0000
+n_segments = 1
+last_processed = 2026-03-08T20:23:36.831019
 

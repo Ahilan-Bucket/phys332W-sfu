@@ -1,47 +1,43 @@
 ======================================================================
-ANALYSIS SUMMARY
+ANALYSIS SUMMARY (Pipeline v1.3)
 ======================================================================
 
-Video: r14-2_1mu-0_5p-4ul-acetone-498ul-trial2.avi
-Date: 2026-03-03
+Input file: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Data\2026-03-03\r14-2_1mu-0_5p-4ul-acetone-498ul-trial2.txt
+Format: MTRACK2 | Units: px
 Bead diameter: 2.1 um
 Solute: 100.0% Acetone
-Temperature: 19.0 C (292.15 K)
-Viscosity: 0.320 mPa.s (0.000320 Pa.s)
-Pixel size: 0.0684 um/px (68.4 nm/px)
-Frame rate: 29.0 fps (read from file)
+Temperature: 21.0 C (294.15 K)
+Viscosity (base): 0.320 mPa.s
+Viscosity (Einstein-corrected): 0.320 mPa.s (phi=3.79e-05)
+Pixel size: 0.0684 um/px
+Frame rate: 29.0 fps (default)
 dt: 34.48 ms
 
-Tracking:
-  Total frames: 240
-  Valid tracks: 8
-  Segments used: 8
-  Total displacement steps: 1904
+Data: 240 frames, 8 particles, 8 segments, 1912 steps
 
 Diffusion Coefficients (um^2/s) — noise-corrected:
-  Method 1 (Direct Variance): 0.3062 +/- 0.0052
-  Method 2 (Gaussian Fit):     0.2878 +/- 0.0052
-  Method 3 (MSD Slope):        0.3437 +/- 0.0213
+  Direct Variance: 0.3433 +/- 0.0049
+  Gaussian Fit:    0.3242 +/- 0.0049
+  MSD Slope:       0.3427 +/- 0.0063
+  D_noise:         0.0180 (subtracted from all methods)
+  Raw (before noise subtraction):
+    Variance: 0.3614  Gauss: 0.3423  MSD: 0.3608
 
-Noise Correction:
-  sigma_noise: 0.06163 um (0.901 px)
-  D_var raw:   0.3612 -> corrected: 0.3062 um^2/s
-  D_gauss raw: 0.3429 -> corrected: 0.2878 um^2/s
-  D_msd:       0.3437 (self-correcting via MSD intercept)
+Theory (Stokes-Einstein + dual-wall Faxen):
+  D_0 (uncorrected):  0.6413 um^2/s
+  F_mid (midplane):   0.9714 (h=41.2 um)
+  F_wall (quarter):   0.9347 (h=10.3 um)
+  D_mid:              0.6230 um^2/s
+  D_wall:             0.5995 um^2/s
 
-Theory (Stokes-Einstein):
-  D_0 (base):      0.6370 um^2/s
-  Faxen factor:     0.9857 (midplane, h=41.2 um)
-  D_theory (final): 0.6279 um^2/s
+Deviations from D_mid:
+  Variance: -44.9%
+  Gaussian: -48.0%
+  MSD: -45.0%
 
-Deviations from Theory (S-E + Faxen):
-  Direct Variance: -51.2%
-  Gaussian Fit: -54.2%
-  MSD Slope: -45.3%
+MSD Exponent: alpha = 0.986 +/- 0.031 (Normal diffusion)
+MSD fit: forced through origin (MSD = 4*D*tau)
+Sigma-clipping: applied before MSD (consistent with variance method)
 
-MSD Exponent:
-  alpha = 1.000 +/- 0.011
-  Classification: DIFFUSIVE (Brownian)
-
-Figures saved to: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Analysis\figures\2026-03-03\r14-2_1mu-0_5p-4ul-acetone-498ul-trial2
+Output: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Analysis\figures\2026-03-03\r14-2_1mu-0_5p-4ul-acetone-498ul-trial2
 ======================================================================

@@ -1,36 +1,43 @@
 ======================================================================
-ANALYSIS SUMMARY
+ANALYSIS SUMMARY (Pipeline v1.3)
 ======================================================================
 
-Video: 5um-20pgly-test-1000burstcount.avi
-Date: 2026-02-24
+Input file: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Data\2026-02-24\5um-20pgly-test-1000burstcount.txt
+Format: MTRACK2 | Units: px
 Bead diameter: 5.0 um
-Glycerol: 20.0%
+Solute: 20.0% Glycerol
 Temperature: 21.0 C (294.15 K)
-Viscosity: 0.004338 Pa.s
-Pixel size: 0.0684 um/px (68.4 nm/px)
-Frame rate: 226 fps
+Viscosity (base): 1.694 mPa.s
+Viscosity (Einstein-corrected): 1.694 mPa.s (phi=0.00e+00)
+Pixel size: 0.0684 um/px
+Frame rate: 29.0 fps (default)
+dt: 34.48 ms
 
-Tracking:
-  Total frames: 240
-  Valid tracks: 8
-  Segments used: 8
-  Total displacement steps: 221
+Data: 240 frames, 8 particles, 8 segments, 252 steps
 
-Diffusion Coefficients (um^2/s):
-  Method 1 (Direct Variance): 3.6384 +/- 0.6814
-  Method 2 (Gaussian Fit):     1.2648 +/- 0.3891
-  Method 3 (MSD Slope):        3.2620 +/- 0.0000
-  Stokes-Einstein (theory):    0.0199
+Diffusion Coefficients (um^2/s) — noise-corrected:
+  Direct Variance: 0.4176 +/- 0.0826
+  Gaussian Fit:    0.2808 +/- 0.0826
+  MSD Slope:       0.2132 +/- 0.0110
+  D_noise:         0.0180 (subtracted from all methods)
+  Raw (before noise subtraction):
+    Variance: 0.4356  Gauss: 0.2988  MSD: 0.2313
 
-Deviations from Stokes-Einstein:
-  Direct Variance: +18211.0%
-  Gaussian Fit: +6265.3%
-  MSD Slope: +16316.9%
+Theory (Stokes-Einstein + dual-wall Faxen):
+  D_0 (uncorrected):  0.0509 um^2/s
+  F_mid (midplane):   0.9320 (h=41.2 um)
+  F_wall (quarter):   0.8468 (h=10.3 um)
+  D_mid:              0.0474 um^2/s
+  D_wall:             0.0431 um^2/s
 
-MSD Exponent:
-  alpha = 0.558 +/- 0.214
-  Classification: SUBDIFFUSIVE (confined)
+Deviations from D_mid:
+  Variance: +780.6%
+  Gaussian: +492.2%
+  MSD: +349.6%
 
-Figures saved to: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Analysis\figures\2026-02-24\5um-20pgly-test-1000burstcount
+MSD Exponent: alpha = 0.373 +/- 0.064 (Sub-diffusive)
+MSD fit: forced through origin (MSD = 4*D*tau)
+Sigma-clipping: applied before MSD (consistent with variance method)
+
+Output: D:\Documents\SFU\PHYS382-AdvancedLab\phys332w-sfu-GIT\phys332W-sfu\Lab2-Microscopy-and-Motility\Analysis\figures\2026-02-24\5um-20pgly-test-1000burstcount
 ======================================================================

@@ -1,9 +1,6 @@
-# === VIDEO METADATA (readme.txt) ===
-# Last updated: 2026-03-05T13:19:35.375109
-#
-# [constants] — write-once (video properties from file + JOBS tuple)
-# [detection] — AUTO = use preset; MANUAL = interactive tuning overrides
-# [volatile]  — overwritten every pipeline run
+# === TRACKER DATA METADATA (readme.txt) ===
+# Updated: 2026-03-08T20:21:48.009111
+# Pipeline: v1.3
 
 [constants]
 filename = s2c-1um-0_5p-11_5ul-water-3978_5ul-gly-1000ul-trial2.avi
@@ -28,14 +25,18 @@ area_mult_min = 0.08
 area_mult_max = 8.0
 
 [volatile]
-pipeline_version = 2.3
-d_variance = 0.202273
-d_gauss = 0.084642
-d_msd = 0.458047
-alpha = 0.6614
-n_tracks = 14
-n_segs = 10
-last_processed = 2026-03-05T13:19:35.375109
-max_displacement_px = 30
-max_gap_frames = 8
+pipeline_version = 1.3
+d_variance = 0.281019
+d_variance_err = 0.105003
+d_gauss = 0.148498
+d_gauss_err = 0.105003
+d_msd = 0.218220
+d_msd_err = 0.012219
+d_mid = 0.250221
+d_wall = 0.245778
+eta_corrected = 0.00169905
+alpha = 0.3177
+alpha_err = 0.0725
+n_segments = 18
+last_processed = 2026-03-08T20:21:48.008111
 

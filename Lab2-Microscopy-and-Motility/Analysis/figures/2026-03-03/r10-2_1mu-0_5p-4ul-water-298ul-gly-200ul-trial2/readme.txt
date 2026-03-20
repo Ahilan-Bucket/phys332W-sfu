@@ -1,9 +1,6 @@
-# === VIDEO METADATA (readme.txt) ===
-# Last updated: 2026-03-05T13:36:39.261709
-#
-# [constants] — write-once (video properties from file + JOBS tuple)
-# [detection] — AUTO = use preset; MANUAL = interactive tuning overrides
-# [volatile]  — overwritten every pipeline run
+# === TRACKER DATA METADATA (readme.txt) ===
+# Updated: 2026-03-08T20:27:27.858817
+# Pipeline: v1.3
 
 [constants]
 filename = r10-2_1mu-0_5p-4ul-water-298ul-gly-200ul-trial2.avi
@@ -28,14 +25,18 @@ area_mult_min = 0.1
 area_mult_max = 6.0
 
 [volatile]
-pipeline_version = 2.3
-d_variance = 0.089599
-d_gauss = 0.057493
-d_msd = 0.137275
-alpha = 0.3555
-n_tracks = 6
-n_segs = 6
-last_processed = 2026-03-05T13:36:39.260710
-max_displacement_px = 15
-max_gap_frames = 3
+pipeline_version = 1.3
+d_variance = 0.123460
+d_variance_err = 0.262976
+d_gauss = 0.069155
+d_gauss_err = 0.262976
+d_msd = 0.145938
+d_msd_err = 0.009373
+d_mid = 0.055528
+d_wall = 0.053434
+eta_corrected = 0.00359042
+alpha = 0.6589
+alpha_err = 0.0319
+n_segments = 6
+last_processed = 2026-03-08T20:27:27.857818
 
